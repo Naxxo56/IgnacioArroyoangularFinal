@@ -25,18 +25,6 @@ public class zonasEntradas {
         return numeroEntradasVip;
     }
 
-    public static String getZonaUno() {
-        return zonaUno;
-    }
-
-    public static String getZonaDos() {
-        return zonaDos;
-    }
-
-    public static String getZonaTres() {
-        return zonaTres;
-    }
-
     public static int getSalaPrincipal() {
         return salaPrincipal;
     }
@@ -69,12 +57,12 @@ public class zonasEntradas {
     public static void venderEntradas() {
         System.out.printf("Que entradas quieres escriba una de las siguientes:%nsalaprincipal%n---%nzonacompraventa%n---%nvip %n");
         opcionZona = teclado.next();
-        if (opcionZona.equals("salaprincipal")) {
+        if (opcionZona.equals(zonaUno)) {
             System.out.println("Has elegido sala principal");
 
             System.out.printf("¿Cuantas entradas quieres?, nos quedan %d entradas%n", getSalaPrincipal());
             numeroEntradasPrincipal = teclado.nextInt();
-        if (numeroEntradasPrincipal > salaPrincipal) {
+            if (numeroEntradasPrincipal > salaPrincipal) {
                 System.out.println("No disponemos de tantas entradas");
             } else if (numeroEntradasPrincipal < salaPrincipal) {
                 System.out.printf("Has comprado %d entradas %n", getNumeroEntradasPrincipal());
@@ -82,24 +70,25 @@ public class zonasEntradas {
                 System.out.printf("Quedan %d entradas de la sala principal", getSalaPrincipal());
             }
         }
-        if (opcionZona.equals("zonacompraventa")) {
+        if (opcionZona.equals(zonaDos)) {
             System.out.println("Has elegido zona compraventa");
 
-            System.out.printf("¿Cuantas entradas quieres?, nos quedan %d entradas%n",getZonaCompraVenta());
-            numeroEntradasCompraVenta=teclado.nextInt();
-          if(numeroEntradasCompraVenta>zonaCompraVenta){
-            System.out.println("No disponemos de tantas entradas");
-        }else if (numeroEntradasCompraVenta<zonaCompraVenta){
-            System.out.printf("Has comprado %d entradas %n", getNumeroEntradasCompraVenta());
-            zonaCompraVenta -= numeroEntradasCompraVenta;
+            System.out.printf("¿Cuantas entradas quieres?, nos quedan %d entradas%n", getZonaCompraVenta());
+            numeroEntradasCompraVenta = teclado.nextInt();
+            if (numeroEntradasCompraVenta > zonaCompraVenta) {
+                System.out.println("No disponemos de tantas entradas");
+            } else if (numeroEntradasCompraVenta < zonaCompraVenta) {
+                System.out.printf("Has comprado %d entradas %n", getNumeroEntradasCompraVenta());
+                zonaCompraVenta -= numeroEntradasCompraVenta;
 
-        }}
-        if (opcionZona.equals("vip")) {
+            }
+        }
+        if (opcionZona.equals(zonaTres)) {
             System.out.println("Has elegido vip");
 
             System.out.printf("¿Cuantas entradas quieres?, nos quedan %d entradas%n", getVip());
             numeroEntradasVip = teclado.nextInt();
-          if (numeroEntradasVip > vip) {
+            if (numeroEntradasVip > vip) {
                 System.out.println("No disponemos de tantas entradas");
             } else if (numeroEntradasVip < vip) {
                 System.out.printf("Has comprado %d entradas %n", getNumeroEntradasVip());
