@@ -5,7 +5,7 @@ import java.io.IOException;
 public class escribirFicheroTexto {
     public static void main(String[] args) throws IOException {
         //abrimos el fichero
-        File fichero = new File("C:\\Users\\digim\\Documents\\auxiliar_java\\archivo.txt");
+        File fichero = new File("C:\\Users\\Usuario DAM2\\Documents\\archivo.txt");
         //creamos flujo de salida
         FileWriter fw = new FileWriter(fichero);
         String cadena = "Esto  es una prueba de FileWriter";

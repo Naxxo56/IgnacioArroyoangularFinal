@@ -7,9 +7,10 @@ import java.nio.charset.StandardCharsets;
 public class leerFicheroTexto {
     public static void main(String[] args) throws IOException {
         //abrimos el fichero
-        File archivo = new File("C:\\Users\\digim\\Documents\\auxiliar_java\\archivo.txt");
+        File archivo = new File("C:\\Users\\Usuario DAM2\\Documents\\archivo.txt");
         //creamos el flujo de entrada
-        //indicamos el juiego de caracteres estandar para poder leer tildes
+        //indicamos el juego de caracteres estandar para poder leer tildes
+        //al ser de texto usamos el filereader
         FileReader fr = new FileReader(archivo, StandardCharsets.UTF_8);
         //uso de bufferedReader
         BufferedReader br = new BufferedReader(fr);
