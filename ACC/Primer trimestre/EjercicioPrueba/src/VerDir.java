@@ -2,7 +2,7 @@ import java.io.File;
 
 public class VerDir {
     public static void main(String[] args) {
-        String dir = ".";
+        String dir = "C:\\Users\\digim\\OneDrive\\Escritorio\\Fotos";
         File f = new File(dir);
         String[] archivos = f.list();
         System.out.printf("Ficheros en mi directorio actual: %d %n", archivos.length);

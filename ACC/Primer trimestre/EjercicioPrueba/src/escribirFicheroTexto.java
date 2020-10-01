@@ -14,6 +14,7 @@ public class escribirFicheroTexto {
         for (int i = 0; i <cad.length ; i++) {
             //escribimos caracter a caracter
             fw.write(cad[i]);
+
         }
         //añadimos un caracter final
         fw.append("\n*");

@@ -28,6 +28,7 @@ public class creacionCarpetas {
             ioe.printStackTrace();
         }
         //renombre del fichero
+
         f3.renameTo(new File(nuevodir,"archivo2.txt"));
 
     }
