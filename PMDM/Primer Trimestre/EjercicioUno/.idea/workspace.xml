@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5e0da998-8aed-4531-bbf1-b7b475ee7760" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/coleccionesInfinitas/Entrada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EjercicioUno/Colecciones/Entrada.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EjercicioUno/Colecciones/Entrada.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1hrW7hoFbw9Hl3W5nfbTo3YPSOs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RunManager" selected="Application.Entrada (3)">
+    <configuration name="Entrada (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Herencia.Entrada" />
+      <module name="EjercicioUno" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Herencia.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Entrada (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Colecciones.Entrada" />
+      <module name="EjercicioUno" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Colecciones.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Entrada (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="coleccionesInfinitas.Entrada" />
+      <module name="EjercicioUno" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="coleccionesInfinitas.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Entrada" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Entrada" />
+      <module name="EjercicioUno" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Entrada (3)" />
+        <item itemvalue="Application.Entrada (2)" />
+        <item itemvalue="Application.Entrada (1)" />
+        <item itemvalue="Application.Entrada" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5e0da998-8aed-4531-bbf1-b7b475ee7760" name="Default Changelist" comment="" />
+      <created>1600769526393</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600769526393</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="558" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1600777431452">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="558" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1600777431452" />
+    <state x="739" y="261" key="FileChooserDialogImpl" timestamp="1600934344294">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="739" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600934344294" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1600936849426">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600936849426" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1600936849426">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600936849426" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1600936849426">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600936849426" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1600936849426">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600936849426" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1600778727149">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1600778727149" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1600778727149">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1600778727149" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1600778727148">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1600778727148" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1600778727149">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1600778727149" />
+    <state x="558" y="222" key="RollbackChangesDialog" timestamp="1600770773226">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="558" y="222" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600770773226" />
+    <state x="342" y="140" key="new project wizard" timestamp="1600936849385">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="140" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1600936849385" />
+    <state x="803" y="277" key="refactoring.ChangeSignatureDialog" timestamp="1600770579717">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="803" y="277" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600770579717" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600935345900">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1600935345900" />
+  </component>
+</project>
