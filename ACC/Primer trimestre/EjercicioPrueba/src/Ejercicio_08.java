@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class Ejercicio_08 {
     public static void main(String[] args) throws IOException {
-        File archivo = new File("C:\\Users\\Usuario DAM2\\Documents\\pedidos.dat");
+        File archivo = new File("C:\\Users\\Usuario DAM2\\Documents\\auxiliar_java\\pedidos.dat");
         if (!archivo.exists()) {
             archivo.createNewFile();
         }
@@ -19,7 +19,6 @@ public class Ejercicio_08 {
             dataOs.writeUTF(articulos[i]);
             dataOs.writeInt(unidades[i]);
             dataOs.writeInt(codigo[i]);
-
         }
         dataOs.close();
     }
