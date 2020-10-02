@@ -19,6 +19,6 @@ public class leerFicheroTexto {
         while((linea=br.readLine()) !=null)
             System.out.println(linea);
         //cerramos fichero
-        fr.close();
+            fr.close();
     }
 }
