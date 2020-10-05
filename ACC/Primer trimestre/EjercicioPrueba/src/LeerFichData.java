@@ -9,8 +9,7 @@ public class LeerFichData {
         String nombre;
         int edad;
         try{
-            while (true){
-                nombre = dataIS.readUTF();
+            while ((nombre = dataIS.readUTF())!=null){
                 edad = dataIS.readInt();
                 System.out.println("Nombre:" + nombre +",Edad:"+edad);
             }
