@@ -8,6 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="Esto es otra pantalla"/>
+        android:text="Segunda pantalla"
+        android:textSize="30sp"
+        android:id="@+id/texto_pantalla_dos"/>
 
 </LinearLayout>

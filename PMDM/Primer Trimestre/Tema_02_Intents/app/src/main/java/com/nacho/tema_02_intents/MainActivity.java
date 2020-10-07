@@ -1,4 +1,4 @@
-package  com.nacho.tema_02_intents;
+package com.nacho.tema_02_intents;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,9 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.nacho.tema_02_intents.utils.Persona;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    Button botonArranque, botonDatos;
+    private Button botonArranque, botonDatos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         botonArranque.setOnClickListener(this);
     }
 
-    public  void instancias(){
+    public void instancias() {
         botonArranque = findViewById(R.id.boton_arrancar_pantalla);
         botonDatos = findViewById(R.id.boton_arrancar_pantalla_dato);
 
@@ -33,14 +35,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        Intent intent = null;
+        switch (view.getId()) {
             case R.id.boton_arrancar_pantalla:
-                Intent intent = new Intent(getApplicationContext(), SegundaActivity.class);
-                startActivity(intent);
+                intent= new Intent(getApplicationContext(),SegundaActivity.class);
                 break;
-            case  R.id.boton_arrancar_pantalla_dato:
-
+            case R.id.boton_arrancar_pantalla_dato:
+                intent= new Intent(getApplicationContext(),SegundaActivity.class);
+                /*
+                intent.putExtra("nombre","Nacho");
+                intent.putExtra("apellido","Arroyo");
+                intent.putExtra("edad",20);
+                intent.putExtra("experiencia",true);
+                 */
+                intent.putExtra("persona", new Persona("Nacho ","Arroyo ",20 , true ));
                 break;
         }
+        startActivity(intent);
     }
 }
