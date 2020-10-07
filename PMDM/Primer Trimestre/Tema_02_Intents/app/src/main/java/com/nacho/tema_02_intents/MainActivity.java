@@ -1,4 +1,4 @@
-package com.julian.tema_02_intents;
+package  com.nacho.tema_02_intents;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,9 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     Button botonArranque, botonDatos;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.boton_arrancar_pantalla:
-                Intent intent = new Intent(getApplicationContext(),SegundaActivity.class);
+                Intent intent = new Intent(getApplicationContext(), SegundaActivity.class);
                 startActivity(intent);
                 break;
             case  R.id.boton_arrancar_pantalla_dato:

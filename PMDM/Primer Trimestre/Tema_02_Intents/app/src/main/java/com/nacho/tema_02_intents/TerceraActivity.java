@@ -1,4 +1,4 @@
-package com.julian.tema_02_intents;
+package com.nacho.tema_02_intents;
 
 import androidx.appcompat.app.AppCompatActivity;
 
