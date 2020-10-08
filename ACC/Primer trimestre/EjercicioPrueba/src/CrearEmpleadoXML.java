@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 
 public class CrearEmpleadoXML {
+    //no dado aun
     public static void main(String[] args) throws IOException {
         File fichero = new File("C:\\Users\\digim\\Documents\\auxiliar_java\\Aleatorio.dat");
         if (!fichero.exists()) {
