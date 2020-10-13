@@ -61,8 +61,8 @@
                                 </rowConstraints>
                                  <children>
                                     <Button mnemonicParsing="false" text="Button" GridPane.rowIndex="1" />
-                                    <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                    <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <Button fx:id="botonImagen" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Button fx:id="botonCambio" mnemonicParsing="false" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                                  </children>
                               </GridPane>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -78,14 +78,14 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" GridPane.rowIndex="1" />
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <RadioButton fx:id="radioUno" mnemonicParsing="false" text="RadioButton" GridPane.rowIndex="1" />
+                                    <RadioButton fx:id="radioDos" mnemonicParsing="false" text="RadioButton" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <RadioButton fx:id="radioCuatro" mnemonicParsing="false" text="RadioButton" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                    <RadioButton fx:id="radioTres" mnemonicParsing="false" text="RadioButton" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                                  </children>
                               </GridPane>
-                              <ToggleButton mnemonicParsing="false" text="ToggleButton" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                               <CheckBox mnemonicParsing="false" text="CheckBox" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <ToggleButton mnemonicParsing="false" text="ToggleButton" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
                      </center>

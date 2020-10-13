@@ -2,5 +2,5 @@
     <string name="app_name">Tema_02_Intents</string>
     <string name="texto_arranque_normal">Arrancar pantalla</string>
     <string name="texto_arranque_datos">Pasar datos</string>
-    <string name="texto_arracnque_resultado">Arrancar esperando</string>
+    <string name="texto_arranque_resultado">Arrancar esperando</string>
 </resources>
