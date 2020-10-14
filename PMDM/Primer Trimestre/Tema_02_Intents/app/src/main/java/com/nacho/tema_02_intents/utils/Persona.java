@@ -4,14 +4,14 @@ import java.io.Serializable;
 
 public class Persona implements Serializable {
     private String nombre, apellido;
-    private int edad;
-    private boolean experiencia;
 
-    public Persona(String nombre, String apellido, int edad, boolean experiencia) {
+    private int telefono;
+
+
+    public Persona(String nombre, String apellido, int telefono) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.edad = edad;
-        this.experiencia = experiencia;
+        this.telefono = telefono;
     }
 
     public String getNombre() {
@@ -30,19 +30,11 @@ public class Persona implements Serializable {
         this.apellido = apellido;
     }
 
-    public int getEdad() {
-        return edad;
+    public int getTelefono() {
+        return telefono;
     }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public boolean isExperiencia() {
-        return experiencia;
-    }
-
-    public void setExperiencia(boolean experiencia) {
-        this.experiencia = experiencia;
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
     }
 }

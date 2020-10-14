@@ -7,42 +7,97 @@
     android:orientation="vertical"
     android:weightSum="1"
     tools:context=".MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.3"
         android:gravity="center"
+        android:orientation="horizontal"
         android:weightSum="1">
 
-    <Button
-        android:layout_width="0dp"
-        android:layout_weight="0.3"
-        android:layout_height="wrap_content"
-        android:text="@string/texto_arranque_normal"
-        android:id="@+id/boton_arrancar_pantalla"/>
-    <Button
-        android:layout_width="0dp"
-        android:layout_weight="0.3"
-        android:layout_height="wrap_content"
-        android:text="@string/texto_arranque_datos"
-        android:id="@+id/boton_arrancar_pantalla_dato"/>
         <Button
+            android:id="@+id/boton_arrancar_pantalla"
             android:layout_width="0dp"
-            android:layout_weight="0.3"
             android:layout_height="wrap_content"
-            android:text="@string/texto_arranque_resultado"
-            android:id="@+id/boton_arrancar_pantalla_resultado"/>
+            android:layout_weight="0.3"
+            android:text="@string/texto_arranque_normal" />
+
+        <Button
+            android:id="@+id/boton_arrancar_pantalla_dato"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@string/texto_arranque_datos" />
+
+        <Button
+            android:id="@+id/boton_arrancar_pantalla_resultado"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="@string/texto_arranque_resultado" />
+
+
     </LinearLayout>
 
-    <TextView
+    <!--<TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.7"
         android:gravity="center"
-        android:text="Aplicacion cambio pantalla"/>
+        android:text="Aplicación cambio pantallas" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edit_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/apell"
+                android:hint="  Introduce el nombre"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
 
+            <EditText
+                android:id="@+id/edit_apellido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/user"
+                android:hint="  Introduce el apellido"
+                android:inputType="text" />
 
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edit_telefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/telf"
+                android:hint="  Introduce telefono"
+                android:inputType="number"
+                android:maxLength="9" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
 
 
 </LinearLayout>

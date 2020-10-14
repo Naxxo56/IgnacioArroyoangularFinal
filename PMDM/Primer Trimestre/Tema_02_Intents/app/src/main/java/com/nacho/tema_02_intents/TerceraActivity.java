@@ -31,10 +31,12 @@ public class TerceraActivity extends AppCompatActivity {
 
                  */
                 String texto = editInicial.getText().toString();
-                Toast.makeText(getApplicationContext(), texto, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), texto, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent();
+                intent.putExtra("dato_respuesta",texto);
+               setResult(0,intent);
+               finish();
             }
         });
-
-
     }
 }
