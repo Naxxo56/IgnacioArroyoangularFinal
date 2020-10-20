@@ -14,8 +14,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <center>
       <GridPane BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -27,6 +26,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
@@ -40,54 +40,65 @@
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <RadioButton mnemonicParsing="false" text="RadioButton" GridPane.columnIndex="2" />
-                  <RadioButton mnemonicParsing="false" text="RadioButton" GridPane.columnIndex="1" />
-                  <RadioButton mnemonicParsing="false" text="RadioButton" />
+                  <RadioButton fx:id="radioCombo" mnemonicParsing="false" text="COMBO" GridPane.columnIndex="2" />
+                  <RadioButton fx:id="radioLista" mnemonicParsing="false" text="LISTA" GridPane.columnIndex="1" />
+                  <RadioButton fx:id="radioTodos" mnemonicParsing="false" text="TODOS" />
+                  <RadioButton fx:id="radioChoice" mnemonicParsing="false" text="CHOICE" GridPane.columnIndex="3" />
                </children>
             </GridPane>
-            <TextField promptText="Introduzca el nombre" GridPane.columnSpan="3" GridPane.rowIndex="1">
+            <TextField fx:id="textNombre" promptText="Introduzca el nombre" GridPane.columnSpan="3" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </GridPane.margin>
             </TextField>
-            <TextField promptText="Introduzca el apellido" GridPane.columnSpan="3" GridPane.rowIndex="2">
+            <TextField fx:id="textApellido" promptText="Introduzca el apellido" GridPane.columnSpan="3" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </GridPane.margin>
             </TextField>
-            <TextField promptText="Introduzca el telefono" GridPane.columnSpan="3" GridPane.rowIndex="3">
+            <TextField fx:id="textTelefono" promptText="Introduzca el telefono" GridPane.columnSpan="3" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </GridPane.margin>
             </TextField>
-            <CheckBox mnemonicParsing="false" text="Disponibilidad" GridPane.rowIndex="4">
+            <CheckBox fx:id="checkBox1" mnemonicParsing="false" text="Disponibilidad" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets left="20.0" />
                </GridPane.margin>
             </CheckBox>
-            <Button mnemonicParsing="false" text="Agregar" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-            <Button mnemonicParsing="false" text="Limpiar Datos" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
-            <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+            <Button fx:id="botonAgregar" mnemonicParsing="false" text="Agregar" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+            <Button fx:id="botonLimpiar" mnemonicParsing="false" text="Limpiar Datos" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+            <ListView fx:id="listView1" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
                <GridPane.margin>
                   <Insets bottom="20.0" right="20.0" />
                </GridPane.margin>
             </ListView>
-            <ChoiceBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <ChoiceBox fx:id="choice1" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
                <GridPane.margin>
                   <Insets left="20.0" />
                </GridPane.margin>
             </ChoiceBox>
-            <ComboBox prefWidth="150.0" GridPane.rowIndex="6">
+            <ComboBox fx:id="comboBox1" prefWidth="150.0" GridPane.rowIndex="7">
                <GridPane.margin>
                   <Insets left="20.0" />
                </GridPane.margin>
             </ComboBox>
-            <TextField promptText="Aqui apareceran los datos cuando pulses agregar " GridPane.columnSpan="3" GridPane.rowIndex="7" />
+            <TextField fx:id="textoFinal" promptText="Aqui apareceran los datos cuando pulses agregar " GridPane.columnSpan="3" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <ComboBox fx:id="comboEstado" prefHeight="25.0" prefWidth="561.0" GridPane.columnSpan="3" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+            </ComboBox>
          </children>
       </GridPane>
    </center>
