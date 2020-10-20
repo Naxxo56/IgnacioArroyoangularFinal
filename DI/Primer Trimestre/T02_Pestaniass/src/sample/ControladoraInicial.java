@@ -2,6 +2,8 @@ package sample;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -20,7 +22,7 @@ import java.util.ResourceBundle;
 
 public class ControladoraInicial implements Initializable {
     @FXML
-    Button botonImagen, botonCambio, botonCapturaTexto;
+    Button botonImagen, botonCambio, botonCapturaTexto,boton_Listas;
 
     @FXML
     RadioButton radio1, radio2, radio3, radio4;
@@ -35,6 +37,17 @@ public class ControladoraInicial implements Initializable {
     PasswordField textoPass;
 
     @FXML
+    ComboBox combo_Box1;
+    @FXML
+    ChoiceBox choice_Box1;
+    @FXML
+    ListView list_View1;
+
+    ObservableList<Persona> listaChoice;
+    ObservableList<Persona> listaCombo;
+    ObservableList<Persona> listaListView;
+
+    @FXML
     CheckBox check1;
 
     DropShadow sombraExterior;
@@ -44,13 +57,29 @@ public class ControladoraInicial implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         instancias();
         personalizarBotones();
+        personalizarListas();
         acciones();
+
+    }
+
+    private void personalizarListas() {
+        choice_Box1.setItems(listaChoice);
+        listaChoice.addAll(new Persona("Nacho","Arroyo",559846),new Persona("Sergio","Mayo",5556));
+        combo_Box1.setItems(listaCombo);
+        listaCombo.addAll(new Persona("Alvaro","Moran",11556),new Persona("Alberto","Royo",558996));
+        list_View1.setItems(listaListView);
+        listaListView.addAll(new Persona("Lorenzo","Carpacho",5424556),new Persona("Gerne","Gaspar",5506));
     }
 
     private void instancias() {
         sombraExterior = new DropShadow();
         grupoRadios = new ToggleGroup();
         grupoToggles = new ToggleGroup();
+
+        listaChoice = FXCollections.observableArrayList();
+        listaCombo = FXCollections.observableArrayList();
+        listaListView = FXCollections.observableArrayList();
+
         asociarDatos();
         grupoRadios.getToggles().addAll(radio1, radio2, radio3, radio4);
         grupoToggles.getToggles().addAll(toggle1, toggle2);
@@ -70,6 +99,7 @@ public class ControladoraInicial implements Initializable {
         botonCambio.addEventHandler(MouseEvent.MOUSE_ENTERED, new ManejoRaton());
         botonCambio.addEventHandler(MouseEvent.MOUSE_EXITED, new ManejoRaton());
         botonImagen.setOnAction(new ManejoPulsaciones());
+        boton_Listas.setOnAction(new ManejoPulsaciones());
         botonCapturaTexto.setOnAction(new ManejoPulsaciones());
         grupoRadios.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
             @Override
@@ -95,7 +125,7 @@ public class ControladoraInicial implements Initializable {
             }
         });
 
-        textoNormal.addEventFilter(KeyEvent.KEY_TYPED,new ManejoTeclas());
+        textoNormal.addEventFilter(KeyEvent.KEY_TYPED, new ManejoTeclas());
 
     }
 
@@ -111,13 +141,14 @@ public class ControladoraInicial implements Initializable {
         //botonImagen.setEffect(sombraExterior);
     }
 
-    class ManejoTeclas implements EventHandler<KeyEvent>{
+    class ManejoTeclas implements EventHandler<KeyEvent> {
 
         @Override
         public void handle(KeyEvent keyEvent) {
 
         }
     }
+
     class ManejoRaton implements EventHandler<MouseEvent> {
 
         @Override
@@ -163,6 +194,12 @@ public class ControladoraInicial implements Initializable {
                  */
                 textoNormal.appendText("s");
                 String numero = textoNormal.getText();
+            }else if(actionEvent.getSource()==boton_Listas){
+                if(choice_Box1.getSelectionModel().getSelectedIndex()!=-1){
+                    Persona persona = listaChoice.get(choice_Box1.getSelectionModel().getSelectedIndex());
+                    System.out.println(persona);
+                }
+
             }
         }
     }
