@@ -182,11 +182,13 @@
                         </GridPane>
                      </center>
                      <bottom>
-                        <Button fx:id="boton_Listas" mnemonicParsing="false" text="Obtener Datos" BorderPane.alignment="CENTER">
-                           <BorderPane.margin>
-                              <Insets bottom="20.0" />
-                           </BorderPane.margin>
-                        </Button>
+                        <FlowPane alignment="CENTER" prefHeight="50.0" prefWidth="0.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="boton_Listas" mnemonicParsing="false" text="Obtener Datos" />
+                              <Button fx:id="botonAgregarLista" mnemonicParsing="false" text="Agregar Dato" />
+                              <Button fx:id="botonDefectoLista" mnemonicParsing="false" text="Poner por defecto" />
+                           </children>
+                        </FlowPane>
                      </bottom>
                   </BorderPane>
                </content>

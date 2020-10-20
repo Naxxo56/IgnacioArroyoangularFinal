@@ -22,7 +22,7 @@ import java.util.ResourceBundle;
 
 public class ControladoraInicial implements Initializable {
     @FXML
-    Button botonImagen, botonCambio, botonCapturaTexto,boton_Listas;
+    Button botonImagen, botonCambio, botonCapturaTexto, boton_Listas,botonAgregarLista,botonDefectoLista;
 
     @FXML
     RadioButton radio1, radio2, radio3, radio4;
@@ -64,11 +64,11 @@ public class ControladoraInicial implements Initializable {
 
     private void personalizarListas() {
         choice_Box1.setItems(listaChoice);
-        listaChoice.addAll(new Persona("Nacho","Arroyo",559846),new Persona("Sergio","Mayo",5556));
+        listaChoice.addAll(new Persona("Nacho", "Arroyo", 559846), new Persona("Sergio", "Mayo", 5556));
         combo_Box1.setItems(listaCombo);
-        listaCombo.addAll(new Persona("Alvaro","Moran",11556),new Persona("Alberto","Royo",558996));
+        listaCombo.addAll(new Persona("Alvaro", "Moran", 11556), new Persona("Alberto", "Royo", 558996));
         list_View1.setItems(listaListView);
-        listaListView.addAll(new Persona("Lorenzo","Carpacho",5424556),new Persona("Gerne","Gaspar",5506));
+        listaListView.addAll(new Persona("Lorenzo", "Carpacho", 5424556), new Persona("Gerne", "Gaspar", 5506));
     }
 
     private void instancias() {
@@ -101,6 +101,8 @@ public class ControladoraInicial implements Initializable {
         botonImagen.setOnAction(new ManejoPulsaciones());
         boton_Listas.setOnAction(new ManejoPulsaciones());
         botonCapturaTexto.setOnAction(new ManejoPulsaciones());
+        botonAgregarLista.setOnAction(new ManejoPulsaciones());
+        botonDefectoLista.setOnAction(new ManejoPulsaciones());
         grupoRadios.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
             @Override
             public void changed(ObservableValue<? extends Toggle> observableValue, Toggle oldValue, Toggle newValue) {
@@ -124,8 +126,24 @@ public class ControladoraInicial implements Initializable {
                 botonImagen.setDisable(t1);
             }
         });
-
         textoNormal.addEventFilter(KeyEvent.KEY_TYPED, new ManejoTeclas());
+        /*
+        combo_Box1.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
+                System.out.println(listaCombo.get(t1.intValue()));
+            }
+        });
+
+         */
+
+        combo_Box1.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Persona>() {
+            @Override
+            public void changed(ObservableValue observableValue, Persona o, Persona t1) {
+                System.out.println(t1.getNombre());
+            }
+        });
+
 
     }
 
@@ -187,19 +205,33 @@ public class ControladoraInicial implements Initializable {
             if (actionEvent.getSource() == botonImagen) {
                 System.out.println(grupoRadios.getSelectedToggle());
             } else if (actionEvent.getSource() == botonCapturaTexto) {
-                /*
+
                 System.out.println(textoNormal.getText());
                 System.out.println(textoArea.getText());
                 System.out.println(textoPass.getText());
-                 */
-                textoNormal.appendText("s");
+
+                /*textoNormal.appendText("s");
                 String numero = textoNormal.getText();
-            }else if(actionEvent.getSource()==boton_Listas){
-                if(choice_Box1.getSelectionModel().getSelectedIndex()!=-1){
-                    Persona persona = listaChoice.get(choice_Box1.getSelectionModel().getSelectedIndex());
-                    System.out.println(persona);
+
+                 */
+            } else if (actionEvent.getSource() == boton_Listas) {
+                if (choice_Box1.getSelectionModel().getSelectedIndex() != -1 && combo_Box1.getSelectionModel().getSelectedIndex() != -1 && list_View1.getSelectionModel().getSelectedIndex() != -1) {
+                    Persona personaChoice = listaChoice.get(choice_Box1.getSelectionModel().getSelectedIndex());
+                    Persona personaCombo = listaCombo.get(combo_Box1.getSelectionModel().getSelectedIndex());
+                    Persona personaListView = listaListView.get(list_View1.getSelectionModel().getSelectedIndex());
+                    System.out.println("La persona del choice es:"+personaChoice);
+                    System.out.println("La persona del combo es:"+personaCombo);
+                    System.out.println("La persona de la lista es:"+personaListView);
                 }
 
+            }else if(actionEvent.getSource()==botonAgregarLista){
+                listaCombo.add(new Persona("Nueva","Nueva",123));
+                listaListView.add(new Persona("Nueva","Nueva",123));
+                listaChoice.add(new Persona("Nueva","Nueva",123));
+            }else if(actionEvent.getSource()==botonDefectoLista){
+                combo_Box1.getSelectionModel().select(0);
+                choice_Box1.getSelectionModel().select(0);
+                list_View1.getSelectionModel().select(0);
             }
         }
     }
