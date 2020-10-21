@@ -29,7 +29,7 @@
                 android:text="Normales" />
 
             <Button
-                android:id="@+id/boton_obtener_datos"
+                android:id="@+id/boton_Normal"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:text="Pulsar" />
         </TableRow>
@@ -41,13 +41,14 @@
                 android:text="Con imagen" />
 
             <ImageButton
-                android:src="@drawable/uno"
-                android:text="Pulsar"
                 android:id="@+id/boton_imagen"
-                android:background="@android:color/transparent"/>
+                android:background="@android:color/transparent"
+                android:src="@drawable/uno"
+                android:text="Pulsar" />
 
 
         </TableRow>
+
         <TableRow>
 
             <TextView
@@ -57,14 +58,115 @@
             <ToggleButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
-                android:textOff=""
-                android:textOn=""
-                android:checked="false"
+                android:id="@+id/toggle_fondo"
                 android:background="@drawable/fondo_toggle"
+                android:checked="false"
+                android:textOff=""
+                android:textOn="" />
+
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="center"
+                android:text="Radio" />
+
+            <RadioButton
+                android:id="@+id/radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="center"
+                android:text="Grupo Radios" />
+
+            <RadioGroup
+                android:id="@+id/grupo_radios"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/radio_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/radio_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true" />
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="center"
+                android:text="CheckBox" />
+
+            <CheckBox
+                android:id="@+id/check"
+                android:checked="true" />
+
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_span="2"
+                android:gravity="center"
+                android:text="SeekBar" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <SeekBar
+                android:id="@+id/seekbar"
+                android:layout_span="2"
+                android:max="10"
+                android:min="0" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_span="2"
+                android:text="Rating Bar" />
+        </TableRow>
+
+        <TableRow>
+
+            <RatingBar
+                android:id="@+id/rating_bar"
+                android:min="0"
+                android:max="10"
+                android:layout_span="2"
+                android:numStars="7"
+                android:stepSize="0.5" />
+        </TableRow>
+        <TableRow>
+            <Button
+                android:layout_span="2"
+                android:text="Valores"
+                android:enabled="false"
+                android:id="@+id/boton_valores"
+                style="@style/Widget.AppCompat.Button.Colored"
                 />
-
-
         </TableRow>
 
     </TableLayout>
