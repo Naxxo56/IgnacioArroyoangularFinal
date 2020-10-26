@@ -3,6 +3,7 @@ package com.example.t3_elementos;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -64,6 +65,29 @@ public class BotonesActivity extends AppCompatActivity implements View.OnClickLi
                 }
             }
         });
+        checkBox.setOnCheckedChangeListener(this);
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                Log.v("seek", "onProgressChanged" + progress + fromUser);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                Log.v("seek", "onStartTrackingTouch");
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                Log.v("seek", "onStopTrackingTouch");
+            }
+        });
+        ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                Log.v("rating",String.valueOf(rating));
+            }
+        });
     }
 
     private void instancias() {
@@ -90,9 +114,11 @@ public class BotonesActivity extends AppCompatActivity implements View.OnClickLi
                 break;
             case R.id.boton_valores:
                 Toast.makeText(getApplicationContext(), String.valueOf(toggleButton.isChecked()), Toast.LENGTH_SHORT).show();
-
                 radioSolo.setChecked(!radioSolo.isChecked());
-
+                //Log.v("seek",String.valueOf(seekBar.getProgress()));
+                //seekBar.setProgress(5, true);
+                //Log.v("rating",String.valueOf(ratingBar.getRating()));
+                ratingBar.setProgress(1,true);
                 break;
         }
     }

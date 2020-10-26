@@ -4,7 +4,7 @@ import java.io.RandomAccessFile;
 
 public class escribirFichAleatorio {
     public static void main(String[] args) throws IOException {
-        File fichero = new File("C:\\Users\\digim\\Documents\\auxiliar_java\\Aleatorios.dat");
+        File fichero = new File("C:\\Users\\Usuario DAM2\\Documents\\auxiliar_java\\Aleatorios.dat");
         if (!fichero.exists()) {
             fichero.createNewFile();
         }
