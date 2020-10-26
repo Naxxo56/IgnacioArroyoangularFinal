@@ -35,19 +35,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        Intent intent=null;
+        Intent intent = null;
         switch (v.getId()) {
             case R.id.botonBotones:
-                intent=new Intent(getApplicationContext(),BotonesActivity.class);
+                intent = new Intent(getApplicationContext(), BotonesActivity.class);
                 break;
             case R.id.botonListaPersonalizada:
-                intent=new Intent(getApplicationContext(),ListasPersoActivity.class);
+                intent = new Intent(getApplicationContext(), ListasPersoActivity.class);
                 break;
             case R.id.botonOtros:
-                intent=new Intent(getApplicationContext(),OtrosActivity.class);
+                intent = new Intent(getApplicationContext(), OtrosActivity.class);
                 break;
             case R.id.botonListas:
-                intent=new Intent(getApplicationContext(),ListasActivity.class);
+                intent = new Intent(getApplicationContext(), ListasActivity.class);
                 break;
         }
         startActivity(intent);
