@@ -3,13 +3,16 @@ package com.example.t3_elementos;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btnBotones, btnOtros, btnListas, btnListasPerso;
+    private ImageView imagen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,23 +34,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnListasPerso = findViewById(R.id.botonListaPersonalizada);
         btnListas = findViewById(R.id.botonListas);
         btnOtros = findViewById(R.id.botonOtros);
+        imagen = findViewById(R.id.imagen_copa);
     }
 
     @Override
     public void onClick(View v) {
-        Intent intent=null;
+        Intent intent = null;
         switch (v.getId()) {
             case R.id.botonBotones:
-                intent=new Intent(getApplicationContext(),BotonesActivity.class);
+                intent = new Intent(getApplicationContext(), BotonesActivity.class);
                 break;
             case R.id.botonListaPersonalizada:
-                intent=new Intent(getApplicationContext(),ListasPersoActivity.class);
+                intent = new Intent(getApplicationContext(), ListasPersoActivity.class);
+                //imagen.setImageResource(R.drawable.on);
+                //imagen.setImageDrawable(getResources().getDrawable(R.drawable.uno,null));
                 break;
             case R.id.botonOtros:
-                intent=new Intent(getApplicationContext(),OtrosActivity.class);
+                intent = new Intent(getApplicationContext(), OtrosActivity.class);
                 break;
             case R.id.botonListas:
-                intent=new Intent(getApplicationContext(),ListasActivity.class);
+                intent = new Intent(getApplicationContext(), ListasActivity.class);
                 break;
         }
         startActivity(intent);
