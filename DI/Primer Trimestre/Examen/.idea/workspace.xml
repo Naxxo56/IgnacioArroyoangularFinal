@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a96661a7-5c9d-4191-866d-99292edbde16" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../PMDM/Primer Trimestre/Examen/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../T02_Pestaniass/src/sample/vista_inicial.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../T02_Pestaniass/src/sample/vista_inicial.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +21,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Formulario" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -37,9 +40,13 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1061" y="456" key="FileChooserDialogImpl" timestamp="1601364434377">
+    <state x="1402" y="275" key="#Project_Structure" timestamp="1603786243388">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1061" y="456" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1601364434377" />
+    <state x="1402" y="275" key="#Project_Structure/0.0.2560.1400@0.0.2560.1400" timestamp="1603786243388" />
+    <state x="1061" y="456" key="FileChooserDialogImpl" timestamp="1603786248001">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1061" y="456" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1603786248001" />
   </component>
 </project>

@@ -11,95 +11,68 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-   <center>
-      <GridPane BorderPane.alignment="CENTER">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="289.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="311.0" minWidth="10.0" prefWidth="311.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="311.0" minWidth="10.0" prefWidth="311.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Label text="Agregar:" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-            <GridPane GridPane.columnIndex="1" GridPane.columnSpan="2">
-              <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <top>
+        <FlowPane alignment="CENTER" hgap="20.0" prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Agregar:" />
+                <RadioButton fx:id="radioLista" mnemonicParsing="false" text="Lista" />
+                <RadioButton fx:id="radioCombo" mnemonicParsing="false" text="Combo" />
+                <RadioButton fx:id="radioChoice" mnemonicParsing="false" text="Choice" />
+                <RadioButton fx:id="radioTodas" mnemonicParsing="false" text="Todas" />
+            </children>
+        </FlowPane>
+    </top>
+    <center>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
+            </columnConstraints>
+            <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <RadioButton fx:id="radioCombo" mnemonicParsing="false" text="COMBO" GridPane.columnIndex="2" />
-                  <RadioButton fx:id="radioLista" mnemonicParsing="false" text="LISTA" GridPane.columnIndex="1" />
-                  <RadioButton fx:id="radioTodos" mnemonicParsing="false" text="TODOS" />
-                  <RadioButton fx:id="radioChoice" mnemonicParsing="false" text="CHOICE" GridPane.columnIndex="3" />
-               </children>
-            </GridPane>
-            <TextField fx:id="textNombre" promptText="Introduzca el nombre" GridPane.columnSpan="3" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-               </GridPane.margin>
-            </TextField>
-            <TextField fx:id="textApellido" promptText="Introduzca el apellido" GridPane.columnSpan="3" GridPane.rowIndex="2">
-               <GridPane.margin>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-               </GridPane.margin>
-            </TextField>
-            <TextField fx:id="textTelefono" promptText="Introduzca el telefono" GridPane.columnSpan="3" GridPane.rowIndex="3">
-               <GridPane.margin>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-               </GridPane.margin>
-            </TextField>
-            <CheckBox fx:id="checkBox1" mnemonicParsing="false" text="Disponibilidad" GridPane.rowIndex="5">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin>
-            </CheckBox>
-            <Button fx:id="botonAgregar" mnemonicParsing="false" text="Agregar" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-            <Button fx:id="botonLimpiar" mnemonicParsing="false" text="Limpiar Datos" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
-            <ListView fx:id="listView1" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
-               <GridPane.margin>
-                  <Insets bottom="20.0" right="20.0" />
-               </GridPane.margin>
-            </ListView>
-            <ChoiceBox fx:id="choice1" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin>
-            </ChoiceBox>
-            <ComboBox fx:id="comboBox1" prefWidth="150.0" GridPane.rowIndex="7">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin>
-            </ComboBox>
-            <TextField fx:id="textoFinal" promptText="Aqui apareceran los datos cuando pulses agregar " GridPane.columnSpan="3" GridPane.rowIndex="8">
-               <GridPane.margin>
-                  <Insets left="20.0" right="20.0" />
-               </GridPane.margin>
-            </TextField>
-            <ComboBox fx:id="comboEstado" prefHeight="25.0" prefWidth="561.0" GridPane.columnSpan="3" GridPane.rowIndex="4">
-               <GridPane.margin>
-                  <Insets left="20.0" right="20.0" />
-               </GridPane.margin>
-            </ComboBox>
-         </children>
-      </GridPane>
-   </center>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Nombre" />
+                <Label text="Apellido" GridPane.rowIndex="1" />
+                <Label text="Telefono" GridPane.rowIndex="2" />
+                <Label text="Estado" GridPane.rowIndex="3" />
+                <Label text="Disponibilidad" GridPane.rowIndex="4" />
+                <FlowPane alignment="CENTER" hgap="20.0" prefHeight="200.0" prefWidth="200.0" vgap="20.0" GridPane.columnSpan="3" GridPane.rowIndex="5">
+                    <children>
+                        <Button disable="true" mnemonicParsing="false" text="Agregar" fx:id="botonAgregar" />
+                        <Button disable="true" mnemonicParsing="false" text="Limpiar datos" fx:id="botonLimpiar" />
+                    </children>
+                </FlowPane>
+                <TextField disable="true" GridPane.columnIndex="1" GridPane.columnSpan="2" fx:id="textNombre" />
+                <TextField disable="true" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" fx:id="textApellido"/>
+                <TextField disable="true" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" fx:id="textTelefono" />
+                <ComboBox fx:id="comboEstado" promptText="Selecciona estado" disable="true" minWidth="-Infinity" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" />
+                <CheckBox fx:id="checkDispo" disable="true" mnemonicParsing="false" text="CheckBox" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" />
+                <ChoiceBox fx:id="choice" prefWidth="150.0" GridPane.rowIndex="6" GridPane.valignment="TOP" />
+                <ComboBox fx:id="combo" prefWidth="150.0" promptText="selecciona elemento" GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.valignment="TOP" />
+                <ListView fx:id="listView"  prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </BorderPane.margin>
+        </GridPane>
+    </center>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <bottom>
+        <Label text="Selección" BorderPane.alignment="CENTER" fx:id="labelSeleccion"/>
+    </bottom>
 </BorderPane>

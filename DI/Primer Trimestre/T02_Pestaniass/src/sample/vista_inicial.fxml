@@ -184,8 +184,14 @@
                      <bottom>
                         <FlowPane alignment="CENTER" prefHeight="50.0" prefWidth="0.0" BorderPane.alignment="CENTER">
                            <children>
-                              <Button fx:id="boton_Listas" mnemonicParsing="false" text="Obtener Datos" />
-                              <Button fx:id="botonAgregarLista" mnemonicParsing="false" text="Agregar Dato" />
+                              <Button fx:id="boton_Listas" mnemonicParsing="false" text="Obtener Datos">
+                                 <FlowPane.margin>
+                                    <Insets right="20.0" />
+                                 </FlowPane.margin></Button>
+                              <Button fx:id="botonAgregarLista" mnemonicParsing="false" text="Agregar Dato">
+                                 <FlowPane.margin>
+                                    <Insets right="20.0" />
+                                 </FlowPane.margin></Button>
                               <Button fx:id="botonDefectoLista" mnemonicParsing="false" text="Poner por defecto" />
                            </children>
                         </FlowPane>
