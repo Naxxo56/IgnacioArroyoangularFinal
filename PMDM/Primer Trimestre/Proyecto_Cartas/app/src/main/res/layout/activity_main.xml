@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_cartas"
+    android:layout_margin="20dp"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -46,8 +47,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="30dp"
-            android:text="20"
-            android:textSize="40sp" />
+            android:text=""
+            android:textSize="40sp"
+            android:id="@+id/texto_record"/>
 
     </FrameLayout>
 </LinearLayout>
