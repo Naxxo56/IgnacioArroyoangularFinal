@@ -4,15 +4,16 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import sample.utils.Persona;
@@ -22,7 +23,12 @@ import java.util.ResourceBundle;
 
 public class ControladoraInicial implements Initializable {
     @FXML
-    Button botonImagen, botonCambio, botonCapturaTexto, boton_Listas,botonAgregarLista,botonDefectoLista;
+    Button botonImagen, botonCambio, botonCapturaTexto, boton_Listas, botonAgregarLista,
+            botonDefectoLista, boton_agregar_tabla, boton_obtener_tabla, boton_borrar_tabla;
+    @FXML
+    TableColumn columna_nombre, columna_apellido, columna_edad, columna_disponibilidad;
+    @FXML
+    TableView tabla;
 
     @FXML
     RadioButton radio1, radio2, radio3, radio4;
@@ -30,7 +36,7 @@ public class ControladoraInicial implements Initializable {
     @FXML
     ToggleButton toggle1, toggle2;
     @FXML
-    TextField textoNormal;
+    TextField textoNormal, texto_filtrar;
     @FXML
     TextArea textoArea;
     @FXML
@@ -46,6 +52,8 @@ public class ControladoraInicial implements Initializable {
     ObservableList<Persona> listaChoice;
     ObservableList<Persona> listaCombo;
     ObservableList<Persona> listaListView;
+    ObservableList listaTabla;
+    FilteredList listaFiltrada;
 
     @FXML
     CheckBox check1;
@@ -58,8 +66,21 @@ public class ControladoraInicial implements Initializable {
         instancias();
         personalizarBotones();
         personalizarListas();
+        personalizarTabla();
         acciones();
 
+    }
+
+    private void personalizarTabla() {
+        columna_nombre.setCellValueFactory(new PropertyValueFactory("nombre"));
+        columna_apellido.setCellValueFactory(new PropertyValueFactory("apellido"));
+        columna_edad.setCellValueFactory(new PropertyValueFactory("edad"));
+        columna_disponibilidad.setCellValueFactory(new PropertyValueFactory("disponibilidad"));
+
+        listaTabla.addAll(new PersonaTabla("Nacho", "Arroyo", 20, false));
+        listaTabla.addAll(new PersonaTabla("Ernesto", "Gaspar", 20, false));
+        listaTabla.addAll(new PersonaTabla("Roberto", "Reviriego", 21, false));
+        tabla.setItems(listaFiltrada);
     }
 
     private void personalizarListas() {
@@ -79,6 +100,8 @@ public class ControladoraInicial implements Initializable {
         listaChoice = FXCollections.observableArrayList();
         listaCombo = FXCollections.observableArrayList();
         listaListView = FXCollections.observableArrayList();
+        listaTabla = FXCollections.observableArrayList();
+        listaFiltrada = new FilteredList(listaTabla);
 
         asociarDatos();
         grupoRadios.getToggles().addAll(radio1, radio2, radio3, radio4);
@@ -143,6 +166,7 @@ public class ControladoraInicial implements Initializable {
                 System.out.println(t1.getNombre());
             }
         });
+        texto_filtrar.addEventFilter(KeyEvent.KEY_TYPED,new ManejoTeclas());
 
 
     }
@@ -219,16 +243,16 @@ public class ControladoraInicial implements Initializable {
                     Persona personaChoice = listaChoice.get(choice_Box1.getSelectionModel().getSelectedIndex());
                     Persona personaCombo = listaCombo.get(combo_Box1.getSelectionModel().getSelectedIndex());
                     Persona personaListView = listaListView.get(list_View1.getSelectionModel().getSelectedIndex());
-                    System.out.println("La persona del choice es:"+personaChoice);
-                    System.out.println("La persona del combo es:"+personaCombo);
-                    System.out.println("La persona de la lista es:"+personaListView);
+                    System.out.println("La persona del choice es:" + personaChoice);
+                    System.out.println("La persona del combo es:" + personaCombo);
+                    System.out.println("La persona de la lista es:" + personaListView);
                 }
 
-            }else if(actionEvent.getSource()==botonAgregarLista){
-                listaCombo.add(new Persona("Nueva","Nueva",123));
-                listaListView.add(new Persona("Nueva","Nueva",123));
-                listaChoice.add(new Persona("Nueva","Nueva",123));
-            }else if(actionEvent.getSource()==botonDefectoLista){
+            } else if (actionEvent.getSource() == botonAgregarLista) {
+                listaCombo.add(new Persona("Nueva", "Nueva", 123));
+                listaListView.add(new Persona("Nueva", "Nueva", 123));
+                listaChoice.add(new Persona("Nueva", "Nueva", 123));
+            } else if (actionEvent.getSource() == botonDefectoLista) {
                 combo_Box1.getSelectionModel().select(0);
                 choice_Box1.getSelectionModel().select(0);
                 list_View1.getSelectionModel().select(0);
