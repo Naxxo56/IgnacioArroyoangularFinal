@@ -20,6 +20,7 @@ import sample.utils.Persona;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.function.Predicate;
 
 public class ControladoraInicial implements Initializable {
     @FXML
@@ -52,8 +53,9 @@ public class ControladoraInicial implements Initializable {
     ObservableList<Persona> listaChoice;
     ObservableList<Persona> listaCombo;
     ObservableList<Persona> listaListView;
-    ObservableList listaTabla;
-    FilteredList listaFiltrada;
+
+    ObservableList<PersonaTabla> listaTabla;
+    FilteredList<PersonaTabla> listaFiltrada;
 
     @FXML
     CheckBox check1;
@@ -80,6 +82,11 @@ public class ControladoraInicial implements Initializable {
         listaTabla.addAll(new PersonaTabla("Nacho", "Arroyo", 20, false));
         listaTabla.addAll(new PersonaTabla("Ernesto", "Gaspar", 20, false));
         listaTabla.addAll(new PersonaTabla("Roberto", "Reviriego", 21, false));
+        listaTabla.addAll(new PersonaTabla("Victor", "Pellicer", 23, false));
+        listaTabla.addAll(new PersonaTabla("Alvaro", "Ginarte", 22, false));
+
+        //tabla.setItems(listaFiltrada);
+        listaFiltrada = new FilteredList(listaTabla);
         tabla.setItems(listaFiltrada);
     }
 
@@ -101,7 +108,7 @@ public class ControladoraInicial implements Initializable {
         listaCombo = FXCollections.observableArrayList();
         listaListView = FXCollections.observableArrayList();
         listaTabla = FXCollections.observableArrayList();
-        listaFiltrada = new FilteredList(listaTabla);
+
 
         asociarDatos();
         grupoRadios.getToggles().addAll(radio1, radio2, radio3, radio4);
@@ -126,6 +133,8 @@ public class ControladoraInicial implements Initializable {
         botonCapturaTexto.setOnAction(new ManejoPulsaciones());
         botonAgregarLista.setOnAction(new ManejoPulsaciones());
         botonDefectoLista.setOnAction(new ManejoPulsaciones());
+        boton_agregar_tabla.setOnAction(new ManejoPulsaciones());
+        boton_borrar_tabla.setOnAction(new ManejoPulsaciones());
         grupoRadios.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
             @Override
             public void changed(ObservableValue<? extends Toggle> observableValue, Toggle oldValue, Toggle newValue) {
@@ -160,13 +169,37 @@ public class ControladoraInicial implements Initializable {
 
          */
 
+
         combo_Box1.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Persona>() {
             @Override
             public void changed(ObservableValue observableValue, Persona o, Persona t1) {
                 System.out.println(t1.getNombre());
             }
         });
-        texto_filtrar.addEventFilter(KeyEvent.KEY_TYPED,new ManejoTeclas());
+
+        texto_filtrar.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                String[] palabras = t1.split("");
+                listaFiltrada.setPredicate(new Predicate<PersonaTabla>() {
+                    @Override
+                    public boolean test(PersonaTabla persona) {
+                        /*
+                        boolean cumple;
+                        if (persona.getNombre().contains(t1)) {
+                            cumple = true;
+                        } else {
+                            cumple = false;
+                        }
+                        return cumple;
+                         */
+                        return persona.getNombre().toLowerCase().contains(t1);
+                        // filtrar por nombre y apellido
+                        //return persona.getNombre().contains(palabras[0]) && persona.getApellido().contains(palabras[1]);
+                    }
+                });
+            }
+        });
 
 
     }
@@ -176,8 +209,7 @@ public class ControladoraInicial implements Initializable {
         Image imagenOk = new Image(getClass().getResourceAsStream("resources/button_on.png"));
         botonImagen.setGraphic(new ImageView(imagenOk));
         botonImagen.setBackground(null);
-        botonCambio.setGraphic(new ImageView
-                (new Image(getClass().getResourceAsStream("resources/button_ok.png"))));
+        botonCambio.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("resources/button_ok.png"))));
         botonCambio.setText("");
         botonCambio.setBackground(null);
         //botonImagen.setEffect(sombraExterior);
@@ -256,6 +288,20 @@ public class ControladoraInicial implements Initializable {
                 combo_Box1.getSelectionModel().select(0);
                 choice_Box1.getSelectionModel().select(0);
                 list_View1.getSelectionModel().select(0);
+            } else if (actionEvent.getSource() == boton_agregar_tabla) {
+                PersonaTabla personaTabla = new PersonaTabla("PersonaNueva", "ApellidoNuevo", 23, false);
+                listaTabla.add(personaTabla);
+            } else if (actionEvent.getSource() == boton_borrar_tabla) {
+                if (listaTabla.size() != 0) {
+                    if(tabla.getSelectionModel().getSelectedIndex()!=-1){
+                        listaTabla.remove(tabla.getSelectionModel().getSelectedIndex());
+                    }else{
+                        System.out.println("Porfavor seleccione algo");
+                    }
+                } else {
+                    System.out.println("Tabla vacia");
+                }
+
             }
         }
     }
