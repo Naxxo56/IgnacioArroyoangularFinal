@@ -25,11 +25,11 @@ import java.util.function.Predicate;
 public class ControladoraInicial implements Initializable {
     @FXML
     Button botonImagen, botonCambio, botonCapturaTexto, boton_Listas, botonAgregarLista,
-            botonDefectoLista, boton_agregar_tabla, boton_obtener_tabla, boton_borrar_tabla;
+            botonDefectoLista, boton_agregar_tabla, boton_obtener_tabla, boton_borrar_tabla, boton_modificar_tabla;
     @FXML
     TableColumn columna_nombre, columna_apellido, columna_edad, columna_disponibilidad;
     @FXML
-    TableView tabla;
+    TableView<PersonaTabla> tabla;
 
     @FXML
     RadioButton radio1, radio2, radio3, radio4;
@@ -37,14 +37,14 @@ public class ControladoraInicial implements Initializable {
     @FXML
     ToggleButton toggle1, toggle2;
     @FXML
-    TextField textoNormal, texto_filtrar;
+    TextField textoNormal, texto_filtrar, nombre_añadir_tabla, apellido_añadir_tabla;
     @FXML
     TextArea textoArea;
     @FXML
     PasswordField textoPass;
 
     @FXML
-    ComboBox combo_Box1;
+    ComboBox combo_Box1, edad_añadir_tabla;
     @FXML
     ChoiceBox choice_Box1;
     @FXML
@@ -53,12 +53,13 @@ public class ControladoraInicial implements Initializable {
     ObservableList<Persona> listaChoice;
     ObservableList<Persona> listaCombo;
     ObservableList<Persona> listaListView;
+    ObservableList listaEdades;
 
     ObservableList<PersonaTabla> listaTabla;
     FilteredList<PersonaTabla> listaFiltrada;
 
     @FXML
-    CheckBox check1;
+    CheckBox check1, disponibilidad_añadir_tabla;
 
     DropShadow sombraExterior;
     ToggleGroup grupoRadios, grupoToggles;
@@ -69,8 +70,16 @@ public class ControladoraInicial implements Initializable {
         personalizarBotones();
         personalizarListas();
         personalizarTabla();
+        personalizarFormulario();
         acciones();
 
+    }
+
+    private void personalizarFormulario() {
+        edad_añadir_tabla.setItems(listaEdades);
+        for (int i = 18; i < 100; i++) {
+            listaEdades.add(i);
+        }
     }
 
     private void personalizarTabla() {
@@ -108,6 +117,7 @@ public class ControladoraInicial implements Initializable {
         listaCombo = FXCollections.observableArrayList();
         listaListView = FXCollections.observableArrayList();
         listaTabla = FXCollections.observableArrayList();
+        listaEdades = FXCollections.observableArrayList();
 
 
         asociarDatos();
@@ -134,7 +144,9 @@ public class ControladoraInicial implements Initializable {
         botonAgregarLista.setOnAction(new ManejoPulsaciones());
         botonDefectoLista.setOnAction(new ManejoPulsaciones());
         boton_agregar_tabla.setOnAction(new ManejoPulsaciones());
+        boton_obtener_tabla.setOnAction(new ManejoPulsaciones());
         boton_borrar_tabla.setOnAction(new ManejoPulsaciones());
+        boton_modificar_tabla.setOnAction(new ManejoPulsaciones());
         grupoRadios.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
             @Override
             public void changed(ObservableValue<? extends Toggle> observableValue, Toggle oldValue, Toggle newValue) {
@@ -168,15 +180,12 @@ public class ControladoraInicial implements Initializable {
         });
 
          */
-
-
         combo_Box1.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Persona>() {
             @Override
             public void changed(ObservableValue observableValue, Persona o, Persona t1) {
                 System.out.println(t1.getNombre());
             }
         });
-
         texto_filtrar.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
@@ -200,8 +209,15 @@ public class ControladoraInicial implements Initializable {
                 });
             }
         });
-
-
+        tabla.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<PersonaTabla>() {
+            @Override
+            public void changed(ObservableValue<? extends PersonaTabla> observableValue, PersonaTabla oldValue, PersonaTabla newValue) {
+                nombre_añadir_tabla.setText(newValue.getNombre());
+                apellido_añadir_tabla.setText(newValue.getApellido());
+                edad_añadir_tabla.getSelectionModel().select(newValue.getEdad() - 18);
+                disponibilidad_añadir_tabla.setSelected(newValue.isDisponibilidad());
+            }
+        });
     }
 
     private void personalizarBotones() {
@@ -289,19 +305,38 @@ public class ControladoraInicial implements Initializable {
                 choice_Box1.getSelectionModel().select(0);
                 list_View1.getSelectionModel().select(0);
             } else if (actionEvent.getSource() == boton_agregar_tabla) {
-                PersonaTabla personaTabla = new PersonaTabla("PersonaNueva", "ApellidoNuevo", 23, false);
-                listaTabla.add(personaTabla);
+
+                if (!nombre_añadir_tabla.getText().equals("") && !apellido_añadir_tabla.getText().equals("") && edad_añadir_tabla.getSelectionModel().getSelectedIndex() != -1) {
+                    PersonaTabla personaTabla = new PersonaTabla(nombre_añadir_tabla.getText(), apellido_añadir_tabla.getText(),(int) (edad_añadir_tabla.getSelectionModel().getSelectedItem()), disponibilidad_añadir_tabla.isSelected());
+                    listaTabla.add(personaTabla);
+                }
             } else if (actionEvent.getSource() == boton_borrar_tabla) {
                 if (listaTabla.size() != 0) {
-                    if(tabla.getSelectionModel().getSelectedIndex()!=-1){
+                    if (tabla.getSelectionModel().getSelectedIndex() != -1) {
                         listaTabla.remove(tabla.getSelectionModel().getSelectedIndex());
-                    }else{
+                    } else {
                         System.out.println("Porfavor seleccione algo");
                     }
                 } else {
                     System.out.println("Tabla vacia");
                 }
 
+            } else if (actionEvent.getSource() == boton_obtener_tabla) {
+                if (tabla.getSelectionModel().getSelectedIndex() != -1) {
+                    /*
+                    PersonaTabla personaTabla = listaTabla.get(tabla.getSelectionModel().getSelectedIndex());
+                    System.out.println(personaTabla.getNombre());
+                     */
+                    PersonaTabla personaTabla = tabla.getSelectionModel().getSelectedItem();
+                    System.out.println(personaTabla.getNombre());
+                }
+            } else if (actionEvent.getSource() == boton_modificar_tabla) {
+                PersonaTabla personaTabla = tabla.getSelectionModel().getSelectedItem();
+                personaTabla.setDisponibilidad(disponibilidad_añadir_tabla.isSelected());
+                personaTabla.setApellido(apellido_añadir_tabla.getText());
+                personaTabla.setNombre(nombre_añadir_tabla.getText());
+                personaTabla.setEdad((Integer) edad_añadir_tabla.getSelectionModel().getSelectedItem());
+                tabla.refresh();
             }
         }
     }
