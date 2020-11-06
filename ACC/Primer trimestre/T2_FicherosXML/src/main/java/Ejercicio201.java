@@ -13,7 +13,7 @@ import java.io.*;
 
 public class Ejercicio201 {
     public static void main(String[] args) throws IOException, ParserConfigurationException, TransformerException {
-        File fichero = new File("C:\\Users\\Usuario DAM2\\Documents\\auxiliar_java\\FichPersona.dat");
+        File fichero = new File("C:\\Users\\digim\\Documents\\auxiliar_java\\FichPersona.dat");
         FileInputStream fileIn = new FileInputStream(fichero);
         ObjectInputStream objIn = new ObjectInputStream(fileIn);
 
@@ -50,7 +50,7 @@ public class Ejercicio201 {
         Source source = new DOMSource(document);
 
         //Asignamos el resultado al fichero EmpleadosDOM.XML
-        Result result = new StreamResult(new File("C:\\Users\\Usuario DAM2\\Documents\\auxiliar_java\\PersonasDOM.XML.dat"));
+        Result result = new StreamResult(new File("C:\\Users\\digim\\Documents\\auxiliar_java\\PersonasDOM.XML.dat"));
 
         //Se obtiene un TransformerFactory para realizar la transformacion del documento a fichero
         Transformer transformer = TransformerFactory.newInstance().newTransformer();
