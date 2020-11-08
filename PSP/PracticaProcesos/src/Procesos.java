@@ -1,11 +1,9 @@
 public class Procesos {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args)   {
         Runtime r=Runtime.getRuntime();
         String comando="notepad";
         Process p;
-        try
-        {
+        try {
             p=r.exec(comando);
         }catch (Exception e){
             System.out.println("Error en: "+comando);
