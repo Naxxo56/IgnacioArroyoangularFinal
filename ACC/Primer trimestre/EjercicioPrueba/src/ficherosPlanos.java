@@ -3,7 +3,7 @@ import java.io.*;
 public class ficherosPlanos {
     public static void main(String[] args) throws IOException {
         Persona persona;
-        File fichero = new File("C:\\Users\\Usuario DAM2\\Documents\\auxiliar_java\\FichPersona.dat");
+        File fichero = new File("C:\\Users\\digim\\Documents\\auxiliar_java\\FichPersona.dat");
         if (!fichero.exists()) {
             fichero.createNewFile();
         }

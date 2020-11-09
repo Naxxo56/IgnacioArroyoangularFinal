@@ -25,10 +25,6 @@ public class MainActivity extends AppCompatActivity {
     private ArrayAdapter adaptadorDos;
     private ArrayAdapter adaptadorTres;
     private Button botonVerResultados;
-
-    public MainActivity() {
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
