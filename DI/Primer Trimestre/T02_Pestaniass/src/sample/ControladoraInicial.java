@@ -9,23 +9,36 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCombination;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import sample.utils.Persona;
 
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.function.Predicate;
 
 public class ControladoraInicial implements Initializable {
     @FXML
+    MenuItem menuBotones, menuTextos, menuTablas, menuListas;
+    @FXML
+    TabPane panelPestañas;
+    @FXML
+    RadioMenuItem menuActivar, menuDesactivar;
+    @FXML
     Button botonImagen, botonCambio, botonCapturaTexto, boton_Listas, botonAgregarLista,
-            botonDefectoLista, boton_agregar_tabla, boton_obtener_tabla, boton_borrar_tabla, boton_modificar_tabla;
+            botonDefectoLista, boton_agregar_tabla, boton_obtener_tabla, boton_borrar_tabla, boton_modificar_tabla,
+            botonInformacion, botonError, botonWarning, botonConfirmacion, botonConfirmacionPerso, botonEntrada,
+            botonEleccion, botonColor, botonFicheros;
+
+
     @FXML
     TableColumn columna_nombre, columna_apellido, columna_edad, columna_disponibilidad;
     @FXML
@@ -62,17 +75,32 @@ public class ControladoraInicial implements Initializable {
     CheckBox check1, disponibilidad_añadir_tabla;
 
     DropShadow sombraExterior;
-    ToggleGroup grupoRadios, grupoToggles;
+    ToggleGroup grupoRadios, grupoToggles, grupoOpciones;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         instancias();
+        personalizarMenu();
         personalizarBotones();
         personalizarListas();
         personalizarTabla();
         personalizarFormulario();
         acciones();
 
+    }
+
+    private void personalizarMenu() {
+        //En dos lineas
+        Image imagenTabBotones = new Image(getClass().getResourceAsStream("resources/botones.png"));
+        menuBotones.setGraphic(new ImageView(imagenTabBotones));
+        menuBotones.setAccelerator(KeyCombination.keyCombination("Ctrl+B"));
+        //De una
+        menuTextos.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("resources/textos.png"))));
+        menuTextos.setAccelerator(KeyCombination.keyCombination("Ctrl+X"));
+        menuTablas.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("resources/tablas.png"))));
+        menuTablas.setAccelerator(KeyCombination.keyCombination("Ctrl+T"));
+        menuListas.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("resources/listas.png"))));
+        menuListas.setAccelerator(KeyCombination.keyCombination("Ctrl+L"));
     }
 
     private void personalizarFormulario() {
@@ -112,6 +140,7 @@ public class ControladoraInicial implements Initializable {
         sombraExterior = new DropShadow();
         grupoRadios = new ToggleGroup();
         grupoToggles = new ToggleGroup();
+        grupoOpciones = new ToggleGroup();
 
         listaChoice = FXCollections.observableArrayList();
         listaCombo = FXCollections.observableArrayList();
@@ -123,6 +152,7 @@ public class ControladoraInicial implements Initializable {
         asociarDatos();
         grupoRadios.getToggles().addAll(radio1, radio2, radio3, radio4);
         grupoToggles.getToggles().addAll(toggle1, toggle2);
+        grupoOpciones.getToggles().addAll(menuActivar, menuDesactivar);
     }
 
     private void asociarDatos() {
@@ -138,15 +168,34 @@ public class ControladoraInicial implements Initializable {
         botonImagen.addEventHandler(MouseEvent.MOUSE_EXITED, new ManejoRaton());
         botonCambio.addEventHandler(MouseEvent.MOUSE_ENTERED, new ManejoRaton());
         botonCambio.addEventHandler(MouseEvent.MOUSE_EXITED, new ManejoRaton());
+
         botonImagen.setOnAction(new ManejoPulsaciones());
         boton_Listas.setOnAction(new ManejoPulsaciones());
+
         botonCapturaTexto.setOnAction(new ManejoPulsaciones());
         botonAgregarLista.setOnAction(new ManejoPulsaciones());
         botonDefectoLista.setOnAction(new ManejoPulsaciones());
+
         boton_agregar_tabla.setOnAction(new ManejoPulsaciones());
         boton_obtener_tabla.setOnAction(new ManejoPulsaciones());
         boton_borrar_tabla.setOnAction(new ManejoPulsaciones());
         boton_modificar_tabla.setOnAction(new ManejoPulsaciones());
+
+        menuBotones.setOnAction(new ManejoPulsaciones());
+        menuListas.setOnAction(new ManejoPulsaciones());
+        menuTablas.setOnAction(new ManejoPulsaciones());
+        menuTextos.setOnAction(new ManejoPulsaciones());
+
+        botonInformacion.setOnAction(new ManejoPulsaciones());
+        botonError.setOnAction(new ManejoPulsaciones());
+        botonWarning.setOnAction(new ManejoPulsaciones());
+        botonConfirmacion.setOnAction(new ManejoPulsaciones());
+        botonConfirmacionPerso.setOnAction(new ManejoPulsaciones());
+        botonEntrada.setOnAction(new ManejoPulsaciones());
+        botonEleccion.setOnAction(new ManejoPulsaciones());
+        botonColor.setOnAction(new ManejoPulsaciones());
+        botonFicheros.setOnAction(new ManejoPulsaciones());
+
         grupoRadios.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
             @Override
             public void changed(ObservableValue<? extends Toggle> observableValue, Toggle oldValue, Toggle newValue) {
@@ -161,6 +210,16 @@ public class ControladoraInicial implements Initializable {
             @Override
             public void changed(ObservableValue<? extends Toggle> observableValue, Toggle toggle, Toggle t1) {
                 System.out.println("cambio");
+            }
+        });
+        grupoOpciones.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
+            @Override
+            public void changed(ObservableValue<? extends Toggle> observableValue, Toggle toggle, Toggle t1) {
+                if (t1 == menuActivar) {
+                    panelPestañas.setDisable(false);
+                } else if (t1 == menuDesactivar) {
+                    panelPestañas.setDisable(true);
+                }
             }
         });
         check1.selectedProperty().addListener(new ChangeListener<Boolean>() {
@@ -218,6 +277,8 @@ public class ControladoraInicial implements Initializable {
                 disponibilidad_añadir_tabla.setSelected(newValue.isDisponibilidad());
             }
         });
+
+
     }
 
     private void personalizarBotones() {
@@ -229,6 +290,8 @@ public class ControladoraInicial implements Initializable {
         botonCambio.setText("");
         botonCambio.setBackground(null);
         //botonImagen.setEffect(sombraExterior);
+
+
     }
 
     class ManejoTeclas implements EventHandler<KeyEvent> {
@@ -307,7 +370,7 @@ public class ControladoraInicial implements Initializable {
             } else if (actionEvent.getSource() == boton_agregar_tabla) {
 
                 if (!nombre_añadir_tabla.getText().equals("") && !apellido_añadir_tabla.getText().equals("") && edad_añadir_tabla.getSelectionModel().getSelectedIndex() != -1) {
-                    PersonaTabla personaTabla = new PersonaTabla(nombre_añadir_tabla.getText(), apellido_añadir_tabla.getText(),(int) (edad_añadir_tabla.getSelectionModel().getSelectedItem()), disponibilidad_añadir_tabla.isSelected());
+                    PersonaTabla personaTabla = new PersonaTabla(nombre_añadir_tabla.getText(), apellido_añadir_tabla.getText(), (int) (edad_añadir_tabla.getSelectionModel().getSelectedItem()), disponibilidad_añadir_tabla.isSelected());
                     listaTabla.add(personaTabla);
                 }
             } else if (actionEvent.getSource() == boton_borrar_tabla) {
@@ -337,6 +400,69 @@ public class ControladoraInicial implements Initializable {
                 personaTabla.setNombre(nombre_añadir_tabla.getText());
                 personaTabla.setEdad((Integer) edad_añadir_tabla.getSelectionModel().getSelectedItem());
                 tabla.refresh();
+            } else if (actionEvent.getSource() == menuBotones) {
+                System.out.println("Pulsado menu botones");
+                panelPestañas.getSelectionModel().select(0);
+            } else if (actionEvent.getSource() == menuListas) {
+                System.out.println("Pulsado menu listas");
+                panelPestañas.getSelectionModel().select(3);
+            } else if (actionEvent.getSource() == menuTablas) {
+                System.out.println("Pulsado menu tablas");
+                panelPestañas.getSelectionModel().select(2);
+            } else if (actionEvent.getSource() == menuTextos) {
+                System.out.println("Pulsado menu textos");
+                panelPestañas.getSelectionModel().select(1);
+            } else if (actionEvent.getSource() == botonInformacion) {
+                Alert alertInfo = new Alert(Alert.AlertType.INFORMATION);
+                alertInfo.setTitle("Diálogo información");
+                alertInfo.setHeaderText("Cabecera de información");
+                alertInfo.setContentText("Cuerpo del cuadro de diálogo");
+                alertInfo.show();
+            } else if (actionEvent.getSource() == botonError) {
+                Alert alertInfo = new Alert(Alert.AlertType.WARNING);
+                alertInfo.setTitle("Diálogo información");
+                alertInfo.setHeaderText("Cabecera de información");
+                alertInfo.setContentText("Cuerpo del cuadro de diálogo");
+                alertInfo.show();
+            } else if (actionEvent.getSource() == botonWarning) {
+                Alert alertInfo = new Alert(Alert.AlertType.WARNING);
+                alertInfo.setTitle("Diálogo información");
+                alertInfo.setHeaderText("Cabecera de información");
+                alertInfo.setContentText("Cuerpo del cuadro de diálogo");
+                alertInfo.show();
+            } else if (actionEvent.getSource() == botonConfirmacion) {
+                Alert alertInfo = new Alert(Alert.AlertType.CONFIRMATION);
+                alertInfo.setTitle("Diálogo información");
+                alertInfo.setHeaderText("Cabecera de confirmacion");
+                alertInfo.setContentText("Cuerpo del cuadro de diálogo");
+                Optional<ButtonType> seccion = alertInfo.showAndWait();
+                System.out.println(seccion);
+                if (seccion.get() == ButtonType.OK) {
+                    System.out.println("Has pulsado aceptar");
+                } else if (seccion.get() == ButtonType.CANCEL) {
+                    System.out.println("Has pulsado cancelar");
+                }
+            } else if (actionEvent.getSource() == botonConfirmacionPerso) {
+                Alert confirmacionPerso = new Alert(Alert.AlertType.CONFIRMATION);
+                confirmacionPerso.setTitle("Titulo");
+                confirmacionPerso.setContentText("Contenido");
+                confirmacionPerso.setHeaderText("Cabecera");
+                ButtonType opcion1 = new ButtonType("Opcion1");
+                ButtonType opcion2 = new ButtonType("Opcion2");
+                ButtonType opcion3 = new ButtonType("Opcion3");
+                ButtonType opcion4 = new ButtonType("Opcion4");
+
+                confirmacionPerso.getButtonTypes().addAll(opcion1, opcion2, opcion3, opcion4);
+                Optional<ButtonType> seccion = confirmacionPerso.showAndWait();
+                if (seccion.get() == opcion1) {
+
+                } else if (seccion.get() == opcion2) {
+
+                } else if (seccion.get() == opcion3) {
+
+                } else if (seccion.get() == opcion4) {
+
+                }
             }
         }
     }
