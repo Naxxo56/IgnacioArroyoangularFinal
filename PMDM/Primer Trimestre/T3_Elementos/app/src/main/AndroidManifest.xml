@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.t3_elementos">
+    package="com.borja.t3_elementos">
 
     <application
         android:allowBackup="true"
@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListasActivity"></activity>
+        <activity android:name=".RecyclerCochesActivity"></activity>
+        <activity android:name=".RecyclerActivity" />
         <activity android:name=".ListasPersoActivity" />
+        <activity android:name=".ListasActivity" />
         <activity android:name=".OtrosActivity" />
         <activity android:name=".BotonesActivity" />
         <activity android:name=".MainActivity">

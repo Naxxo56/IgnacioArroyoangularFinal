@@ -8,6 +8,7 @@
     android:weightSum="1"
     tools:context=".BotonesActivity">
 
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -22,6 +23,7 @@
         android:layout_weight="0.9"
         android:stretchColumns="0">
 
+
         <TableRow>
 
             <TextView
@@ -29,41 +31,41 @@
                 android:text="Normales" />
 
             <Button
-                android:id="@+id/boton_Normal"
+                android:id="@+id/boton_normal"
                 style="@style/Widget.AppCompat.Button.Colored"
-                android:text="Pulsar" />
+                android:text="pulsar" />
+
         </TableRow>
 
         <TableRow>
 
             <TextView
-                android:layout_gravity="center"
+                android:gravity="center"
                 android:text="Con imagen" />
 
             <ImageButton
                 android:id="@+id/boton_imagen"
                 android:background="@android:color/transparent"
-                android:src="@drawable/uno"
-                android:text="Pulsar" />
-
+                android:src="@drawable/add"
+                android:text="pulsar" />
 
         </TableRow>
 
         <TableRow>
 
             <TextView
-                android:layout_gravity="center"
+                android:gravity="center"
                 android:text="Toggle" />
 
             <ToggleButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/toggle_fondo"
                 android:background="@drawable/fondo_toggle"
-                android:checked="false"
+                android:checked="true"
                 android:textOff=""
-                android:textOn="" />
-
+                android:textOn=""
+                android:id="@+id/toggle_button"
+                />
 
         </TableRow>
 
@@ -77,14 +79,15 @@
                 android:id="@+id/radio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true" />
+                android:checked="false" />
+
         </TableRow>
 
         <TableRow>
 
             <TextView
                 android:gravity="center"
-                android:text="Grupo Radios" />
+                android:text="Grupo radio" />
 
             <RadioGroup
                 android:id="@+id/grupo_radios"
@@ -93,21 +96,19 @@
                 <RadioButton
                     android:id="@+id/radio_1"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true" />
+                    android:layout_height="wrap_content" />
 
                 <RadioButton
                     android:id="@+id/radio_2"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true" />
+                    android:layout_height="wrap_content" />
 
                 <RadioButton
                     android:id="@+id/radio_3"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true" />
+                    android:layout_height="wrap_content" />
             </RadioGroup>
+
         </TableRow>
 
         <TableRow>
@@ -120,7 +121,6 @@
                 android:id="@+id/check"
                 android:checked="true" />
 
-
         </TableRow>
 
         <TableRow>
@@ -129,7 +129,6 @@
                 android:layout_span="2"
                 android:gravity="center"
                 android:text="SeekBar" />
-
         </TableRow>
 
         <TableRow>
@@ -137,39 +136,44 @@
             <SeekBar
                 android:id="@+id/seekbar"
                 android:layout_span="2"
-                android:max="10"
+                android:max="100"
                 android:min="0" />
+
         </TableRow>
 
         <TableRow>
 
             <TextView
-                android:layout_gravity="center"
                 android:layout_span="2"
-                android:text="Rating Bar" />
+                android:gravity="center"
+                android:text="Ratin Bar" />
         </TableRow>
 
-        <TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            >
 
             <RatingBar
                 android:id="@+id/rating_bar"
-                android:min="0"
-                android:max="10"
+                android:layout_width="wrap_content"
                 android:layout_span="2"
-                android:numStars="7"
+                android:max="10"
+                android:min="0"
+                android:numStars="5"
                 android:stepSize="0.5" />
         </TableRow>
+
         <TableRow>
+
             <Button
+                android:enabled="false"
                 android:layout_span="2"
                 android:text="Valores"
-                android:enabled="false"
                 android:id="@+id/boton_valores"
-                style="@style/Widget.AppCompat.Button.Colored"
-                />
+                style="@style/Widget.AppCompat.Button.Colored"/>
         </TableRow>
 
-    </TableLayout>
 
+    </TableLayout>
 
 </LinearLayout>

@@ -18,9 +18,13 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.FileChooser;
+import javafx.stage.Window;
 import sample.utils.Persona;
 
+import java.io.*;
 import java.net.URL;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.function.Predicate;
@@ -452,7 +456,7 @@ public class ControladoraInicial implements Initializable {
                 ButtonType opcion3 = new ButtonType("Opcion3");
                 ButtonType opcion4 = new ButtonType("Opcion4");
 
-                confirmacionPerso.getButtonTypes().addAll(opcion1, opcion2, opcion3, opcion4);
+                confirmacionPerso.getButtonTypes().setAll(opcion1, opcion2, opcion3, opcion4, ButtonType.CANCEL);
                 Optional<ButtonType> seccion = confirmacionPerso.showAndWait();
                 if (seccion.get() == opcion1) {
 
@@ -462,8 +466,125 @@ public class ControladoraInicial implements Initializable {
 
                 } else if (seccion.get() == opcion4) {
 
+                } else if (seccion.get() == ButtonType.CANCEL) {
+
                 }
+            } else if (actionEvent.getSource() == botonEntrada) {
+                boolean entrar = false;
+                try {
+                    do {
+                        TextInputDialog dialogoEntrada = new TextInputDialog();
+                        dialogoEntrada.setTitle("Titulo");
+                        dialogoEntrada.setHeaderText("Cabecera");
+                        dialogoEntrada.setContentText("Contenido");
+                        Optional<String> texto = dialogoEntrada.showAndWait();
+
+                        if (texto.get().equals("")) {
+                            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                            alert.setContentText("Estas seguro?");
+                            Optional<ButtonType> contestacion = alert.showAndWait();
+                            if (contestacion.get() == ButtonType.CANCEL) {
+                                entrar = true;
+                            } else {
+                                break;
+                            }
+                        } else {
+                            System.out.println(texto.get());
+                            break;
+                        }
+                    } while (entrar);
+
+                } catch (NoSuchElementException e) {
+                    System.out.println("No hay valor");
+                }
+            } else if (actionEvent.getSource() == botonEleccion) {
+
+                ObservableList lista = FXCollections.observableArrayList();
+                lista.addAll(new Persona("Nacho", "Arroyo", 1),
+                        new Persona("Adrian", "Lowis", 2),
+                        new Persona("Ernesto", "Gaspar", 3),
+                        new Persona("Sergio", "Martin", 4));
+
+                ChoiceDialog<Persona> choiceDialog = new ChoiceDialog(lista.get(0), lista);
+                choiceDialog.setContentText("Contenido");
+                choiceDialog.setTitle("Titulo");
+                choiceDialog.setHeaderText("Cabezera");
+                Optional<Persona> seleccion = choiceDialog.showAndWait();
+                System.out.println(seleccion.get());
+
+
+            } else if (actionEvent.getSource() == botonColor) {
+
+                FileChooser fileChooser = new FileChooser();
+                File fichero = fileChooser.showOpenDialog(botonColor.getScene().getWindow());
+                File[] listaFicheros = fichero.getParentFile().listFiles();
+                for (File file : listaFicheros) {
+                    System.out.println(file);
+                    if(file.isDirectory()){
+                        listar(file);
+                    }
+                }
+
+            } else if (actionEvent.getSource() == botonFicheros) {
+
+                TextInputDialog textInputDialog = new TextInputDialog("Valor por defecto");
+                Optional seleccion = textInputDialog.showAndWait();
+                ObservableList lista = FXCollections.observableArrayList();
+                lista.addAll(new Persona("Nacho", "Arroyo", 1),
+                        new Persona("Adrian", "Lowis", 2),
+                        new Persona("Ernesto", "Gaspar", 3),
+                        new Persona("Sergio", "Martin", 4));
+
+                ChoiceDialog<Persona> dialogoChoice = new ChoiceDialog<>(lista.get(0), lista);
+                Optional<Persona> seleccionPersona = dialogoChoice.showAndWait();
+
+
+                FileChooser fileChooser = new FileChooser();
+                File file = fileChooser.showOpenDialog(botonFicheros.getScene().getWindow());
+                //me saca la ruta que abres System.out.println(file.getAbsolutePath());
+                /*
+                if(file.canRead() && file.exists()){
+                    FileReader fileReader = null;
+                    BufferedReader bufferedReader = null;
+                    try {
+                       fileReader  = new FileReader(file);
+                       bufferedReader = new BufferedReader(fileReader);
+                        System.out.println(bufferedReader.readLine());
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    */
+                if (file.getParentFile().canWrite()) {
+                    FileWriter fileWriter = null;
+                    BufferedWriter bufferedWriter = null;
+                    try {
+                        file.createNewFile();
+                        fileWriter = new FileWriter(file);
+                        bufferedWriter = new BufferedWriter(fileWriter);
+                        bufferedWriter.write(seleccion.get().toString());
+                        //salto de linea
+                        bufferedWriter.newLine();
+                        bufferedWriter.write(seleccionPersona.get().toString());
+                        bufferedWriter.newLine();
+                        bufferedWriter.close();
+                        fileWriter.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    System.out.println("No hay permisos");
+                }
+
+
             }
+        }
+    }
+    public void listar(File directorio){
+        File[] listaFicheros = directorio.listFiles();
+        for (File file : listaFicheros) {
+            System.out.println(file);
         }
     }
 }

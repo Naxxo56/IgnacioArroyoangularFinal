@@ -7,11 +7,12 @@
     android:orientation="vertical"
     android:weightSum="1"
     tools:context=".OtrosActivity">
+
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.1"
-        android:id="@+id/spinner_opciones" />
+        android:id="@+id/spinner_opciones"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -19,13 +20,17 @@
         android:text="OPCION SELECCIONADA"
         android:textSize="30sp"
         android:gravity="center"
-        android:id="@+id/texto_opcion"/>
+        android:id="@+id/texto_opcion"
+        />
     <Button
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.1"
         android:text="Pulsar"
         android:id="@+id/boton_spinner"
-        style="@style/Widget.AppCompat.Button.Colored"/>
+        style="@style/Widget.AppCompat.Button.Colored"
+        />
+
+
 
 </LinearLayout>

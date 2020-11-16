@@ -4,54 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="40dp"
-    android:gravity="center"
     android:orientation="vertical"
+    android:gravity="center"
+    android:layout_margin="40dp"
     tools:context=".MainActivity">
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:gravity="center"
         android:text="Proyecto elementos"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_marginBottom="50dp"/>
 
     <Button
-        android:id="@+id/botonBotones"
-        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Botones" />
-
-    <Button
-        android:id="@+id/botonOtros"
+        android:text="Botones"
+        android:id="@+id/boton_act_botones"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Otros" />
-
-    <Button
-        android:id="@+id/botonListas"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Listas" />
-
-    <Button
-        android:id="@+id/botonListaPersonalizada"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Lista personalizada" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/copa"
-        android:id="@+id/imagen_copa"
-
         />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Otros"
+        android:id="@+id/boton_act_otros"
+        style="@style/Widget.AppCompat.Button.Colored"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Listas"
+        android:id="@+id/boton_act_listas"
+        style="@style/Widget.AppCompat.Button.Colored"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Listas personalizadas"
+        android:id="@+id/boton_act_listas_perso"
+        style="@style/Widget.AppCompat.Button.Colored"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recycler"
+        android:id="@+id/boton_act_recycler"
+        style="@style/Widget.AppCompat.Button.Colored"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recycler coches"
+        android:id="@+id/boton_recycler_coches"
+        style="@style/Widget.AppCompat.Button.Colored"
+        />
+
+
 
 
 </LinearLayout>
