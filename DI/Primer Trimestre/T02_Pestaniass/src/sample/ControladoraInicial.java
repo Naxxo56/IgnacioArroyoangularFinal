@@ -8,8 +8,11 @@ import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.effect.DropShadow;
@@ -18,12 +21,15 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import javafx.stage.Window;
 import sample.utils.Persona;
 
 import java.io.*;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -32,19 +38,27 @@ import java.util.function.Predicate;
 public class ControladoraInicial implements Initializable {
     @FXML
     MenuItem menuBotones, menuTextos, menuTablas, menuListas;
+
     @FXML
     TabPane panelPestañas;
+
     @FXML
     RadioMenuItem menuActivar, menuDesactivar;
+
     @FXML
     Button botonImagen, botonCambio, botonCapturaTexto, boton_Listas, botonAgregarLista,
             botonDefectoLista, boton_agregar_tabla, boton_obtener_tabla, boton_borrar_tabla, boton_modificar_tabla,
             botonInformacion, botonError, botonWarning, botonConfirmacion, botonConfirmacionPerso, botonEntrada,
-            botonEleccion, botonColor, botonFicheros;
+            botonEleccion, botonBuscador, botonFicheros, botonComunicacion;
 
+    @FXML
+    ColorPicker dialogoColor;
+    @FXML
+    DatePicker dialogoFecha;
 
     @FXML
     TableColumn columna_nombre, columna_apellido, columna_edad, columna_disponibilidad;
+
     @FXML
     TableView<PersonaTabla> tabla;
 
@@ -54,7 +68,7 @@ public class ControladoraInicial implements Initializable {
     @FXML
     ToggleButton toggle1, toggle2;
     @FXML
-    TextField textoNormal, texto_filtrar, nombre_añadir_tabla, apellido_añadir_tabla;
+    TextField textoNormal, texto_filtrar, nombre_añadir_tabla, apellido_añadir_tabla, textoComunicacion;
     @FXML
     TextArea textoArea;
     @FXML
@@ -197,8 +211,13 @@ public class ControladoraInicial implements Initializable {
         botonConfirmacionPerso.setOnAction(new ManejoPulsaciones());
         botonEntrada.setOnAction(new ManejoPulsaciones());
         botonEleccion.setOnAction(new ManejoPulsaciones());
-        botonColor.setOnAction(new ManejoPulsaciones());
+        botonBuscador.setOnAction(new ManejoPulsaciones());
         botonFicheros.setOnAction(new ManejoPulsaciones());
+
+        dialogoColor.setOnAction(new ManejoPulsaciones());
+        dialogoFecha.setOnAction(new ManejoPulsaciones());
+
+        botonComunicacion.setOnAction(new ManejoPulsaciones());
 
         grupoRadios.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
             @Override
@@ -513,14 +532,14 @@ public class ControladoraInicial implements Initializable {
                 System.out.println(seleccion.get());
 
 
-            } else if (actionEvent.getSource() == botonColor) {
+            } else if (actionEvent.getSource() == botonBuscador) {
 
                 FileChooser fileChooser = new FileChooser();
-                File fichero = fileChooser.showOpenDialog(botonColor.getScene().getWindow());
+                File fichero = fileChooser.showOpenDialog(botonBuscador.getScene().getWindow());
                 File[] listaFicheros = fichero.getParentFile().listFiles();
                 for (File file : listaFicheros) {
                     System.out.println(file);
-                    if(file.isDirectory()){
+                    if (file.isDirectory()) {
                         listar(file);
                     }
                 }
@@ -578,10 +597,51 @@ public class ControladoraInicial implements Initializable {
                 }
 
 
+            } else if (actionEvent.getSource() == dialogoColor) {
+
+                System.out.println(dialogoColor.getValue());
+                Color color = dialogoColor.getValue();
+                System.out.println("#" + color.toString().substring(2, color.toString().length() - 2));
+
+            } else if (actionEvent.getSource() == dialogoFecha) {
+
+                System.out.println(dialogoFecha.getValue());
+                LocalDate localDate = dialogoFecha.getValue();
+
+
+            } else if (actionEvent.getSource() == botonComunicacion) {
+                // Stage(ventana) Scene(Parent--> FXML + Controller) -> Nodes
+                try {
+
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("ventana_adicional.fxml"));
+                    Parent root = loader.load();
+                    ControladorAdicional controladorAdicional = loader.getController();
+                    controladorAdicional.comunicarTexto(new Persona("Nacho", "Arroyo", 123), ControladoraInicial.this);
+
+                    Scene scene = new Scene(root, 300, 300);
+                    Stage ventanaAdicional = new Stage();
+                    ventanaAdicional.setScene(scene);
+                    ventanaAdicional.show();
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
             }
         }
     }
-    public void listar(File directorio){
+
+    public void terminarComunicacion(String texto) {
+        textoComunicacion.setText(texto);
+    }
+
+
+    public void cerrarVentana() {
+        textoComunicacion.getScene().getWindow().hide();
+    }
+
+
+    public void listar(File directorio) {
         File[] listaFicheros = directorio.listFiles();
         for (File file : listaFicheros) {
             System.out.println(file);
