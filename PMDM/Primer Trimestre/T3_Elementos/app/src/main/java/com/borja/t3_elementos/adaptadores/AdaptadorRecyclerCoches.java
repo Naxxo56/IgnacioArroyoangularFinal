@@ -12,7 +12,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.borja.t3_elementos.R;
-import com.borja.t3_elementos.RecyclerCochesActivity;
 import com.borja.t3_elementos.utils.Coche;
 
 import java.util.List;
