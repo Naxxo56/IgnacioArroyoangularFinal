@@ -315,7 +315,6 @@
                               <Button fx:id="botonEntrada" mnemonicParsing="false" text="Entrada" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                               <Button fx:id="botonFicheros" mnemonicParsing="false" text="Ficheros" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                               <Button fx:id="botonBuscador" mnemonicParsing="false" text="Buscador" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <Button fx:id="botonColor" mnemonicParsing="false" text="Color" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                               <DatePicker fx:id="dialogoFecha" GridPane.rowIndex="3" />
                               <ColorPicker fx:id="dialogoColor" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                            </children>
@@ -324,7 +323,7 @@
                   </BorderPane>
                </content>
             </Tab>
-            <Tab fx:id="tabComunicar" text="Comunicar">
+            <Tab fx:id="tabComunicar" text="Comunicacion">
                <content>
                   <BorderPane prefHeight="200.0" prefWidth="200.0">
                      <center>
@@ -339,12 +338,12 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <TextField fx:id="textoComunicacion" GridPane.valignment="CENTER">
+                              <TextField fx:id="textoComunicacion" GridPane.columnIndex="1" GridPane.valignment="CENTER">
                                  <GridPane.margin>
                                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                  </GridPane.margin>
                               </TextField>
-                              <Button fx:id="botonComunicacion" mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <Button fx:id="botonComunicacion" mnemonicParsing="false" text="Comunicar" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                            </children>
                         </GridPane>
                      </center>
