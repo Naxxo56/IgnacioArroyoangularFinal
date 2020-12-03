@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_opcion_hamburguesa"
+        android:title="Hamburguesas"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:id="@+id/menu_opcion_helado"
+        android:title="Helados"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:id="@+id/menu_opcion_cafe"
+        android:title="Cafe"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:id="@+id/menu_opcion_ensalada"
+        android:title="Ensaladas"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:id="@+id/menu_opcion_bebida"
+        android:title="Bebidas"
+        app:showAsAction="collapseActionView" />
+
+
+</menu>

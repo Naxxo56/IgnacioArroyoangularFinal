@@ -1,12 +1,14 @@
 package com.borja.t3_elementos;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import com.borja.t3_elementos.adaptadores.AdaptadorRecycler;
 import com.borja.t3_elementos.utils.Coche;

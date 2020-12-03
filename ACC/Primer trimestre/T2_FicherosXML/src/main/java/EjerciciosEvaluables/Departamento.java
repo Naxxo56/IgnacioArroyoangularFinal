@@ -1,8 +1,14 @@
 package EjerciciosEvaluables;
 
-public class Departamento {
+import java.io.Serializable;
+
+public class Departamento implements Serializable {
     int id;
-    String nombre,localidad;
+    String nombre, localidad;
+
+    public Departamento() {
+
+    }
 
     public Departamento(int id, String nombre, String localidad) {
         this.id = id;
@@ -32,5 +38,14 @@ public class Departamento {
 
     public void setLocalidad(String localidad) {
         this.localidad = localidad;
+    }
+
+    @Override
+    public String toString() {
+        return "Departamento{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", localidad='" + localidad + '\'' +
+                '}';
     }
 }
