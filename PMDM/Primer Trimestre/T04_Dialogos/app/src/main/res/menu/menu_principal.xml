@@ -19,6 +19,21 @@
             <item
                 android:id="@+id/menu_dialogo_lista"
                 android:title="Lista" />
+            <item
+                android:id="@+id/menu_dialogo_single"
+                android:title="Lista seleccion simple" />
+            <item
+                android:id="@+id/menu_dialogo_multiple"
+                android:title="Lista seleccion multiple" />
+            <item
+                android:id="@+id/menu_dialogo_fecha"
+                android:title="Dialogo Fecha" />
+            <item
+                android:id="@+id/menu_dialogo_hora"
+                android:title="Dialogo Hora" />
+            <item
+                android:id="@+id/menu_dialogo_personalizado"
+                android:title="Dialogo Personalizado" />
         </menu>
     </item>
 
