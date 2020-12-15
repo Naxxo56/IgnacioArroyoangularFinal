@@ -60,9 +60,13 @@ let variableFuncionFlechaRetornoAdicional = (p1,p2) => {
 };
 
 function funcionConCallback(param1,param2,param3) {
-
     console.log(`El resultado de sumar ${param1} y ${param2} es ${param3(param1,param2)}`);
-    
+}
+
+function funcionCallBackRetorno(param1,param2) {
+    return (param1,param2) => {
+        console.log(`La suma de los dos parametros es ${param1+param2}`);
+    }
 }
 
 
