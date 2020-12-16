@@ -3,10 +3,12 @@ package com.example.practicadialogos.dialogos;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -30,10 +32,30 @@ public class DialogoDos extends DialogFragment {
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("Dialogo Dos");
-        builder.setMessage("Introduce tu nombre");
+        builder.setTitle(R.string.titulo_d2);
+        builder.setMessage(R.string.mensaje_d2);
         builder.setView(view);
+
         editNombre = view.findViewById(R.id.edit_nombre);
+
+
+        builder.setPositiveButton(R.string.boton_continuar, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                if (!editNombre.getText().toString().isEmpty()) {
+                    listener.onDialogoConfirmacionSelectedDos(editNombre.getText().toString());
+                } else {
+                    Toast.makeText(getContext(), "Fallo al comunicar", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+        builder.setNegativeButton(R.string.boton_cancelar, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                listener.onDialogoConfirmacionSelectedDos("No");
+            }
+        });
 
         return builder.create();
     }

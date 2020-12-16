@@ -10,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
+import com.example.practicadialogos.R;
+
 public class DialogoUno extends DialogFragment {
 
     OnDialogoConfirmacion listener;
@@ -25,15 +27,15 @@ public class DialogoUno extends DialogFragment {
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setTitle("Dialogo 1");
-        builder.setMessage("Bienvenido al examen.¿Estás seguro de continuar?");
-        builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+        builder.setTitle(R.string.titulo_d1);
+        builder.setMessage(R.string.mensaje_d1);
+        builder.setPositiveButton(R.string.boton_si, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 listener.onDialogoConfirmacionSelected("Si");
             }
         });
-        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(R.string.boton_no, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 listener.onDialogoConfirmacionSelected("No");

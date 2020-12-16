@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">PracticaDialogos</string>
+    <string name="titulo_d1">Dialogo 1</string>
+    <string name="mensaje_d1">Bienvenido al examen.¿Estás seguro de continuar?</string>
+    <string name="boton_si">Si</string>
+    <string name="boton_no">No</string>
+    <string name="titulo_d2">Dialogo 2</string>
+    <string name="mensaje_d2">Introduce tu nombre</string>
+    <string name="boton_continuar">Continuar</string>
+    <string name="boton_cancelar">Cancelar</string>
+    <string name="hint_dialogoDos">Introduce nombre</string>
+    <string name="titulo_d3">Dialogo 3</string>
+    <string name="mensaje_d3_p1">Perfecto</string>
+    <string name="mensaje_d3_p2">,ahora tendras que introducir una fecha y una hora</string>
 </resources>
