@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintCircleRadius="@android:dimen/app_icon_size"
+    tools:context=".MainActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:stretchColumns="0">
+
+        <TableRow>
+
+            <Spinner
+                android:id="@+id/spinnerVueloUno"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/fecha_salida"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textSize="12dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Fecha Ida" />
+
+
+            <TextView
+                android:id="@+id/hora_salida"
+                android:layout_gravity="center"
+                android:textSize="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Hora ida" />
+        </TableRow>
+
+        <TableRow>
+
+            <Spinner
+                android:id="@+id/spinnerVueloDos"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/fecha_llegada"
+                android:layout_gravity="center"
+                android:textSize="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Fecha vuelta" />
+
+            <TextView
+                android:id="@+id/hora_llegada"
+                android:layout_gravity="center"
+                android:textSize="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Hora vuelta" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView />
+
+            <TextView />
+
+            <CheckBox
+                android:id="@+id/check_ida"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:text="Solo ida" />
+
+        </TableRow>
+
+        <Button
+            android:id="@+id/boton_agregar_viaje"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar Viaje" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_main"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="match_parent" />
+
+    </TableLayout>
+
+
+
+
+</LinearLayout>

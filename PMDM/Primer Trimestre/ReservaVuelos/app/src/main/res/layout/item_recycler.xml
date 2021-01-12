@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="20dp"
+    app:cardElevation="20px">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imagen_recycler_pais"
+            android:layout_width="match_parent"
+            android:layout_height="275dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher_background" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:id="@+id/boton_detalle_recycler"
+        android:text="VER DETALLES" />
+    <TextView
+        android:id="@+id/texto_paisida_paisvuelta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/color_fondo"
+        android:gravity="left"
+        android:layout_gravity="left"
+        android:text="nombre de origen-----nombre de destino"
+        android:textSize="20dp" />
+
+
+</androidx.cardview.widget.CardView>

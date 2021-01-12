@@ -18,7 +18,7 @@ import androidx.fragment.app.DialogFragment;
 import com.nacho.t04_dialogos.R;
 
 public class DialogoPersonalizado extends DialogFragment {
-
+/*
     private View view;
     private Button botonDialogo;
     private EditText editNombre, editPass;
@@ -73,4 +73,7 @@ public class DialogoPersonalizado extends DialogFragment {
         void onDialogoPersoSelected();
         
     }
+
+
+ */
 }

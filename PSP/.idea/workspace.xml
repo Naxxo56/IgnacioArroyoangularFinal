@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="baa07788-df41-432f-b4cb-9c9e1b458fed" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/src/androidTest/java/com/nacho/linearlayouts/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/src/main/java/com/nacho/linearlayouts/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/app/src/test/java/com/nacho/linearlayouts/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/LinearLayouts/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/androidTest/java/com/nacho/reservavuelos/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/java/com/nacho/reservavuelos/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/java/com/nacho/reservavuelos/SplashActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/java/com/nacho/reservavuelos/adaptadores/AdaptadorRecycler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/java/com/nacho/reservavuelos/adaptadores/AdaptadorSpinner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/java/com/nacho/reservavuelos/dialogos/DialogoFecha.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/java/com/nacho/reservavuelos/dialogos/DialogoHora.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/java/com/nacho/reservavuelos/utils/Pais.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/drawable-v24/barcelona.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/drawable-v24/florencia.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/drawable-v24/fondo_splash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/drawable-v24/losangeles.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/drawable-v24/madrid.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/drawable-v24/nuevayork.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/drawable-v24/roma.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/drawable-v24/sanfrancisco.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/layout/item_recycler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/layout/item_spinner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/layout/splash_viaje.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/menu/menu_principal.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/app/src/test/java/com/nacho/reservavuelos/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ReservaVuelos/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DI/Primer Trimestre/EjerciciosPizza/out/production/EjerciciosPizza/Entrada.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DI/Primer Trimestre/EjerciciosPizza/out/production/EjerciciosPizza/Entrada.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DI/Primer Trimestre/Examen/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DI/Primer Trimestre/Examen/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DI/Primer Trimestre/Formulario/out/production/Formulario/sample/Controller$ManejoPulsaciones.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DI/Primer Trimestre/Formulario/out/production/Formulario/sample/Controller$ManejoPulsaciones.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PMDM/Primer Trimestre/IgnacioArroyoMayoExamenFinal.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PMDM/Primer Trimestre/IgnacioArroyoMayoFinal.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PMDM/Primer Trimestre/T04_Dialogos/app/src/main/java/com/nacho/t04_dialogos/dialogos/DialogoPersonalizado.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/T04_Dialogos/app/src/main/java/com/nacho/t04_dialogos/dialogos/DialogoPersonalizado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PMDM/Primer Trimestre/T3_Elementos.7z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PMDM/Primer Trimestre/T3_Elementos/app/src/main/res/layout/activity_botones.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/T3_Elementos/app/src/main/res/layout/activity_botones.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ToolBar/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/ToolBar/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PMDM/Primer Trimestre/TrabajoEvaluacion/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PMDM/Primer Trimestre/TrabajoEvaluacion/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarreraCoches/CarreraCoches.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EjemploHilosTocho/EjemploHilosTocho.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EjemploIP/EjemploIP.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hilos/Hilos.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HilosFinalPSP/HilosFinalPSP.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PracticaProcesos/PracticaProcesos.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedesPSP/RedesPSP.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1mqTk1VxgWELWmyP40eMLFecT8f" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="baa07788-df41-432f-b4cb-9c9e1b458fed" name="Default Changelist" comment="" />
+      <created>1610220260833</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610220260833</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="342" y="140" key="new project wizard" timestamp="1610220276667">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="140" key="new project wizard/-3840.-447.2560.1413/0.0.1920.1040@0.0.1920.1040" timestamp="1610220276667" />
+  </component>
+</project>
