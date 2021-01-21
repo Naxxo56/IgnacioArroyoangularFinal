@@ -3,7 +3,9 @@
 let inputUno = document.querySelector("#inputColl");
 let inputDos = document.querySelector("#inputColl2");
 let inputTres = document.querySelector("#inputColl3");
-let botonUno = document.querySelector("#botonColl");
+
+
+//let botonUno = document.querySelector("#botonColl");
 
 /*
 botonUno.addEventListener("click",()=>{
@@ -17,18 +19,39 @@ botonUno.addEventListener("click",()=>{
 
 /*
 function botonUnoPulsado(){
-    console.log(inputUno.nodeValue);
+    console.log(inputUno.value);
 }
 function botonDosPulsado() {
-    console.log(inputDos.nodeValue);
+    console.log(inputDos.value);
     
 }
 function botonTresPulsado() {
-    console.log(inputTres.nodeValue);
+    console.log(inputTres.value);
 }
 */
 
-$("#botonColl").click(()=>{
-console.log(inputUno.value);
+
+
+$("#botonColl").click(() => {
+    console.log(inputUno.value);
 });
 
+$("#botonColl2").click(() => {
+    console.log(inputDos.value);
+});
+
+
+$("#botonColl3").click(() => {
+    console.log(inputTres.value);
+});
+
+/*
+function inputPulsado(){
+    console.log( document.querySelector("#inputColl2").value);
+  
+}
+*/
+
+function inputPulsado(evento) {
+    console.log(evento.target.value);
+}

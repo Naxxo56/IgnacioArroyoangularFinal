@@ -23,27 +23,34 @@
             <div class="col">
                 <h2>Columna 1</h2>
                 <div>
-                    <input placeholder="Introduce datos" type="text" id="inputColl" class="form-control mb-2" value="Ejemplo de valor" />
-                    <button class="btn btn-info btn-block" id="botonColl" onclick="botonUnoPulsado()">Obtener datos</button>
+                    <input placeholder="Introduce datos" onchange="inputPulsado()" type="text" id="inputColl"
+                        class="form-control mb-2" value="Ejemplo de valor" />
+                    <button class="btn btn-info btn-block" id="botonColl" onclick="botonUnoPulsado()">Obtener
+                        datos</button>
                 </div>
             </div>
             <div class="col">
                 <h2>Columna 2</h2>
                 <div>
-                    <input placeholder="Introduce numeros" type="number" id="inputColl2" class="form-control mb-2" />
-                    <button class="btn btn-info btn-block" id="botonColl2" onclick="botonDosPulsado()">Obtener datos</button>
+                    <input placeholder="Introduce numeros" onchange="inputPulsado(event)" type="number" id="inputColl2"
+                        class="form-control mb-2" />
+                    <button class="btn btn-info btn-block" id="botonColl2" onclick="botonDosPulsado()">Obtener
+                        datos</button>
                 </div>
             </div>
             <div class="col">
                 <h2>Columna 3</h2>
                 <div>
-                        <input placeholder="Introduce la fecha" type="date" id="inputColl3" class="form-control mb-2" />
-                        <button class="btn btn-info btn-block" id="botonColl3"onclick="botonTresPulsado()">Obtener datos</button>
-                    </div>
+                    <input placeholder="Introduce la fecha" onchange="inputPulsado(event)" type="date" id="inputColl3"
+                        class="form-control mb-2" />
+                    <button class="btn btn-info btn-block" id="botonColl3" onclick="botonTresPulsado()">Obtener
+                        datos</button>
+                </div>
             </div>
         </div>
     </div>
-    <script src="./assets/js/05_repasoDom.js"></script>
+    <script src="./assets/js/08_promesas.js"></script>
+    
 </body>
 
 </html>

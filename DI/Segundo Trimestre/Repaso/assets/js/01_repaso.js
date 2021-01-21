@@ -72,12 +72,6 @@ switch (opcion) {
 
 //FOR
 let coleccion = ["hola","que","tal","estas","muy","bien"];
-for (const iterator of coleccion) {
-    console.log(iterator);
-}
-for (const key in coleccion) {
-    console.log(key,coleccion[key]);
-}
 /*
 
 for (let index = 0; index < 10; index++) {

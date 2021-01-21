@@ -6,5 +6,8 @@
     <color name="fondo_activity">#FFC107</color>
     <color name="fondo_estatico">#FF5722</color>
     <color name="white">#FFFFFF</color>
-    <color name="color_fragment_uno">#2196F3</color>
+    <color name="fondo_boton1">#009688</color>
+    <color name="fondo_boton2">#001496</color>
+    <color name="fondo_boton3">#772106</color>
+    <color name="fondo_header_funcional">#3F51B5</color>
 </resources>

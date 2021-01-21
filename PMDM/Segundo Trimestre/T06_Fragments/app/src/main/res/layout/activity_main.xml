@@ -1,30 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:layout_margin="10dp"
+android:background="@color/fondo_activity"
+android:orientation="vertical"
+android:weightSum="1"
+tools:context=".MainActivity">
+
+<fragment
+    android:id="@+id/fragment_estatico"
+    class="com.nacho.t06_fragments.fragments.FragmentFuncional"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="10dp"
-    android:background="@color/fondo_activity"
-    android:orientation="vertical"
-    android:weightSum="1"
-    tools:context=".MainActivity">
+    android:layout_height="0dp"
+    android:layout_weight="0.3" />
 
-    <fragment
-        android:id="@+id/fragment_header"
-        class="com.nacho.t06_fragments.fragments.FragmentHeader"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.2" />
+<!--<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.2">
 
-    <FrameLayout
-        android:id="@+id/sitio_fragments"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.8">
+    <Button
+        android:id="@+id/boton_ir_F1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_weight="0.3"
+        android:background="@color/fondo_boton1"
+        android:text="Ir F1" />
+
+    <Button
+        android:id="@+id/boton_ir_F2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_weight="0.3"
+        android:background="@color/fondo_boton2"
+        android:text="Ir F2" />
+
+    <Button
+        android:id="@+id/boton_ir_F3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_weight="0.3"
+        android:background="@color/fondo_boton3"
+        android:text="Ver pila" />
+</LinearLayout>-->
+
+<!--<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.1">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.6"
+        android:gravity="center"
+        android:hint="Introduce tag a buscar" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.4"
+        android:text="Buscar Fragment" />
+</LinearLayout>-->
+
+<FrameLayout
+    android:id="@+id/sitio_fragments"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="0.7">
 
 
-    </FrameLayout>
+</FrameLayout>
 
 
 </LinearLayout>
