@@ -39,14 +39,14 @@ public class AdaptadorRecyclerPersonas extends RecyclerView.Adapter<AdaptadorRec
 
     @Override
     public void onBindViewHolder(@NonNull MyHolder holder, int position) {
-        Persona pActual = listaPersonas.get(position);
+        final Persona pActual = listaPersonas.get(position);
         holder.getNombre().setText(pActual.getNombre());
         holder.getApellido().setText(pActual.getApellido());
         holder.getImagen().setImageResource(pActual.getImagen());
         holder.getImagen().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    listener.onPersonaSelected();
+                    listener.onPersonaSelected(pActual);
             }
         });
     }
@@ -57,7 +57,7 @@ public class AdaptadorRecyclerPersonas extends RecyclerView.Adapter<AdaptadorRec
     }
 
     public interface OnPersonaItemListener {
-        void onPersonaSelected();
+        void onPersonaSelected(Persona persona);
     }
 
     class MyHolder extends RecyclerView.ViewHolder {
