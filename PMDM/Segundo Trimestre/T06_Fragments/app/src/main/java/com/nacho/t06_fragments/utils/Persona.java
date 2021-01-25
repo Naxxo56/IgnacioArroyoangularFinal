@@ -1,6 +1,8 @@
 package com.nacho.t06_fragments.utils;
 
-public class Persona {
+import java.io.Serializable;
+
+public class Persona implements Serializable {
     private String nombre, apellido;
     private int imagen;
 

@@ -7,8 +7,10 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 
 import com.nacho.t06_fragments.adapters.AdaptadorRecyclerPersonas;
+import com.nacho.t06_fragments.fragments.FragmentDetalle;
 import com.nacho.t06_fragments.fragments.FragmentRecyclerPersonas;
 import com.nacho.t06_fragments.fragments.FragmentUno;
+import com.nacho.t06_fragments.utils.Persona;
 
 public class SecondActivity extends AppCompatActivity implements AdaptadorRecyclerPersonas.OnPersonaItemListener {
 
@@ -30,11 +32,11 @@ public class SecondActivity extends AppCompatActivity implements AdaptadorRecycl
     }
 
     @Override
-    public void onPersonaSelected() {
+    public void onPersonaSelected(Persona persona) {
         fm = getSupportFragmentManager();
         ft = fm.beginTransaction();
         ft.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out);
-        ft.replace(R.id.sitio_fragments_recycler, new FragmentUno(), "fUno");
+        ft.replace(R.id.sitio_fragments_recycler, new FragmentDetalle.newInstance(persona), "fUno");
         ft.addToBackStack("fUno");
         ft.commit();
     }
