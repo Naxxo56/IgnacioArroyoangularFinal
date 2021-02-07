@@ -1,0 +1,9 @@
+<h2>Directiva switch</h2>
+<p>La directiva switch evalua un caso sobre el contenido de una variable</p>
+<input class="form-control" type="number" #inputSwitch>
+<button class="btn btn-primary" (click)="cambiarValorInput(inputSwitch.value)">Mostrar</button>
+<div [ngSwitch]="valorInput">
+    <div *ngSwitchCase="1">output</div>
+    <div *ngSwitchCase="2">output2</div>
+    <div *ngSwitchDefault>outputdefault</div>
+</div>

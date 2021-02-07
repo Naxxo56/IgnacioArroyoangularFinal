@@ -1,0 +1,46 @@
+
+<h2>Buscador tec </h2>
+<div>
+  <input type="text" placeholder="introduce tecnologia" class="form-control" #inputBuscar>
+  <button class="btn btn-primary" (click)="buscarTecnologia(inputBuscar.value)">Buscar</button>
+  <div class="row">
+    <div [ngSwitch]="tecnologiasArrayBusqueda.length">
+      <div *ngSwitchCase="0">
+        <div class="alert alert-secondary" role="alert">
+         No hay tecnologias
+        </div>
+      </div>
+      <div *ngSwitchDefault>
+        <div class="row">
+        <div class="col" *ngFor="let item of tecnologiasArrayBusqueda">
+          <div class="card" style="width: 18rem">
+            <img [src]="item.getImagen |imagen" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">{{ item.getNombre |personalizado}}</h5>
+              <p class="card-text">
+                {{ item.getDesc }}
+              </p>
+              <a href="#" class="btn btn-primary">Ver detalle</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+<h2>Listado Total</h2>
+<div class="row mt-4">
+  <div class="card" style="width: 18rem" *ngFor="let item of tecnologiaArray">
+    <img [src]="item.getImagen |imagen" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ item.getNombre |personalizado}}</h5>
+      <p class="card-text">
+        {{ item.getDesc }}
+      </p>
+      <a href="#" class="btn btn-primary">Ver detalle</a>
+    </div>
+  </div>
+</div>
+
