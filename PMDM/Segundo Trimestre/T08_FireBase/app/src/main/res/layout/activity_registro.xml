@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".RegistroActivity">
+
+    <EditText
+        android:id="@+id/edit_usuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Introduzca nombre" />
+
+    <EditText
+        android:id="@+id/edit_contra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Introduzca la contraseña" />
+
+    <Button
+        android:id="@+id/boton_registro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar" />
+
+    <Button
+        android:id="@+id/boton_ver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver registrado" />
+
+    <Button
+        android:id="@+id/boton_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login" />
+
+</LinearLayout>
