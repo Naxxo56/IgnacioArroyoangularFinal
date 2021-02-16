@@ -1,0 +1,93 @@
+{
+  "project_info": {
+    "project_number": "237876969009",
+    "firebase_url": "https://iniciofb-9cd1f-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "iniciofb-9cd1f",
+    "storage_bucket": "iniciofb-9cd1f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237876969009:android:aef9d24d1d7ae6ef849f10",
+        "android_client_info": {
+          "package_name": "com.nacho.t08__firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237876969009-kat7tt47gv5t3lfjsor9cdbq0nq5gf61.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nacho.t08__firebase",
+            "certificate_hash": "5ebe285314b1c505cbed43cabf1957ebf80033be"
+          }
+        },
+        {
+          "client_id": "237876969009-nvrl09o3sqr11oat4sjirrvmtusku7ja.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0CtkEHV0AobZ8H3_ZG-YZXQYjlzFNsTk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237876969009-nvrl09o3sqr11oat4sjirrvmtusku7ja.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237876969009:android:f23605863d2f7bd5849f10",
+        "android_client_info": {
+          "package_name": "com.nacho.t08_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237876969009-ef3macq60nn1u6ogjf4k426sstagdlnq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nacho.t08_firebase",
+            "certificate_hash": "b3334f4edcaf990684f80ccc80633abf17b67535"
+          }
+        },
+        {
+          "client_id": "237876969009-m5c0t76guapk7dqqeibfsp6vguhhqc3n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nacho.t08_firebase",
+            "certificate_hash": "5ebe285314b1c505cbed43cabf1957ebf80033be"
+          }
+        },
+        {
+          "client_id": "237876969009-nvrl09o3sqr11oat4sjirrvmtusku7ja.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0CtkEHV0AobZ8H3_ZG-YZXQYjlzFNsTk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237876969009-nvrl09o3sqr11oat4sjirrvmtusku7ja.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

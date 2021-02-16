@@ -15,13 +15,42 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/inicio']" routerLinkActive = "active"> Inicio </a>
+          <a
+            class="nav-link"
+            aria-current="page"
+            [routerLink]="['/home']"
+            routerLinkActive="active"
+            >Inicio</a
+          >
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Ciclos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" (click)="irCiclo(1)">DAM</a>
+            </li>
+            <li>
+              <a class="dropdown-item" (click)="irCiclo(2)">DAW</a>
+            </li>
+          </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/ciclos']" routerLinkActive = "active"> Ciclos </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/asignaturas']" routerLinkActive = "active"> Asignaturas </a>
+          <a
+            class="nav-link"
+            [routerLink]="['/asignaturas']"
+            routerLinkActive="active"
+            >Asignaturas</a
+          >
         </li>
       </ul>
       <form class="d-flex">
