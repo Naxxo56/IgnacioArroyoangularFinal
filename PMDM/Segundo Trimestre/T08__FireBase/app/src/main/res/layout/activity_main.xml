@@ -4,32 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:layout_margin="20dp"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="BASE DATOS"
-        android:textSize="30sp"
         android:gravity="center"
-        />
+        android:text="BASE DATOS"
+        android:textSize="30sp" />
 
     <TextView
+        android:id="@+id/cabecera_uid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_gravity="center"
-        android:id="@+id/cabecera_uid"
-        />
+        android:gravity="center" />
 
 
     <Button
+        android:id="@+id/button_nodo_princial"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Añadir nodo principal"
-        android:id="@+id/button_nodo_princial"/>
+        android:text="Añadir nodo principal" />
+
+    <Button
+        android:id="@+id/button_nodo_secundario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Añadir objeto" />
+
+    <Button
+        android:id="@+id/button_get_dato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Obtener dato" />
+
+    <Button
+        android:id="@+id/button_get_objeto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Obtener objeto" />
+
 
 </LinearLayout>
