@@ -1,1 +1,19 @@
-<p>asignatura works!</p>
+<div class="card" style="width: 15rem">
+  <div class="card-body">
+    <h5 class="card-title">{{ asignatura.nombre }}</h5>
+    Profesor: {{ asignatura.profesor }}
+    <br />
+    Ciclo: {{ asignatura.ciclo }}
+    <br />
+    Curso: {{ asignatura.curso }}
+    <br />
+    <div *ngFor="let conocimiento of asignatura.conocimientos">
+      <img
+        [src]="conocimiento.imagen"
+        class="img-thumbnail"
+        style="width: 8rem; height: 5rem"
+        alt="..."
+      />
+    </div>
+  </div>
+</div>

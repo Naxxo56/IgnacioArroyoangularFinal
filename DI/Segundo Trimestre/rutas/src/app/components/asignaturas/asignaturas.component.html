@@ -1,1 +1,26 @@
-<p>asignaturas works!</p>
+
+<div class="row"> 
+    <div class="col text-center mt-3" >
+        Filtrar por nombre:
+        <input type="text" class="form-control position-relative"  placeholder="Introduce el nombre de la asignatura" #inputNombre>
+    </div>
+    <div class="col text-center mt-3">
+        Filtrar por ciclo:
+        <input type="text" class="form-control" placeholder="Selecciona un ciclo" #inputCiclo >
+    </div>
+    <div class="col text-center mt-3">
+        Filtrar por conocimiento:
+        <input type="text" class="form-control" placeholder="Selecciona un conocimiento" #inputConocimiento>
+    </div>
+    <button type="button" class="btn btn-info mt-3" (click)="buscarAsignatura(inputNombre.value,inputCiclo.value)">Filtrar</button>
+</div>
+<br>
+<h2>Los resultados de búsqueda son:</h2>
+ <div class="alert alert-success" role="alert">
+    El número de asignaturas que cumplen el filtro es de : {{asignaturasPintar.length}}
+  </div>
+<div class="row">
+  <div class="col" *ngFor="let item of asignaturasPintar">
+    <app-asignatura [asignatura]="item"></app-asignatura>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col">
+    <img
+      [src]="imagen"
+      class="img-thumbnail mt-3"
+      style="width: 15rem; height: 10rem"
+      alt="..."
+    />
+    <h2>{{ cicloo }} {{ cursoo }}</h2>
+    <h3>Conocimientos necesarios:</h3>
+    <div *ngFor="let item of conofiltrado">
+      <ul>
+        <li *ngFor="let items of item.conocimientos">
+          {{ items.nombre }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col">
+  <h1 class="mt-3">Las asignaturas del ciclo son:</h1>
+  <br>
+  <div class="row">
+      <div class="col"  *ngFor="let item of conofiltrado">
+  <div class="card" style="width: 15rem">
+    <div class="card-body">
+      <h5 class="card-title">{{ item.nombre }}</h5>
+      Profesor: {{ item.profesor }}
+      <br />
+      Ciclo: {{ item.ciclo }}
+      <br />
+      Curso:{{ item.curso }}
+      <br />
+      <div *ngFor="let itemC of item.conocimientos">
+        <img
+          [src]="itemC.imagen"
+          class="img-thumbnail"
+          style="width: 8rem; height: 5rem"
+          alt="..."
+        />
+      </div>
+    </div>
+</div>
+    </div>
+  </div>
+</div>
+</div>

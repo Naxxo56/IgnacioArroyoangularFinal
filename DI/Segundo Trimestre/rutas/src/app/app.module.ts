@@ -6,11 +6,9 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { CiclosComponent } from './components/ciclos/ciclos.component';
-import { AsirComponent } from './components/asir/asir.component';
-import { DamComponent } from './components/dam/dam.component';
-import { DawComponent } from './components/daw/daw.component';
 import { AsignaturaComponent } from './components/asignatura/asignatura.component';
 import { AsignaturasComponent } from './components/asignaturas/asignaturas.component';
+import { CicloDetalleComponent } from './components/ciclo-detalle/ciclo-detalle.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +16,9 @@ import { AsignaturasComponent } from './components/asignaturas/asignaturas.compo
     NavbarComponent,
     HomeComponent,
     CiclosComponent,
-    AsirComponent,
-    DamComponent,
-    DawComponent,
     AsignaturaComponent,
-    AsignaturasComponent
+    AsignaturasComponent,
+    CicloDetalleComponent
   ],
   imports: [
     BrowserModule,

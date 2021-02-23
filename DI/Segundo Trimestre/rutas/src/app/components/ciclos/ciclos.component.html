@@ -1,6 +1,55 @@
-<p>ciclos works!</p>
-<p>Dato pasado:</p>
-<ul class="list-group">
+<h2>Los ciclos tecnológicos son</h2>
+<div class="row">
+  <div class="col">
+    <h2>DAM</h2>
+    Asignaturas:
+    <ul class="list-group mt-3">
+      <li class="list-group-item" *ngFor="let item of elementosDam">
+        {{ item.nombre }}
+      </li>
+    </ul>
+  </div>
+  <div class="col">
+    <h2>DAW</h2>
+    Asignaturas:
+    <ul class="list-group mt-3">
+      <li class="list-group-item" *ngFor="let item of elementosDaw">
+        {{ item.nombre }}
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col" *ngFor="let item of ciclosPintar">
+    <div class="card mt-4" style="width: 16rem">
+      <div class="card-body">
+        <div>
+          <img
+            [src]="item.imagen"
+            class="img-thumbnail"
+            style="width: 15rem; height: 10rem"
+            alt="..."
+          />
+        </div>
+        <h5 class="card-title mt-1">{{ item.curso }} {{ item.nombre }}</h5>
+        <p class="lead">
+          <a
+            class="nav-link btn btn-primary btn-lg mt-3"
+            [routerLink]="['/cicloDetalle']"
+            routerLinkActive="active"
+            role="button"
+            (click)="irCiclo(item.nombre, item.curso)"
+            >Ver detalles</a
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+  <ul class="list-group">
   <li class="list-group-item" *ngFor="let item of elementos">{{ item }}</li>
 </ul>
 
@@ -16,4 +65,4 @@
       </li>
     </ul>
   </li>
-</ul>
+</ul>  -->

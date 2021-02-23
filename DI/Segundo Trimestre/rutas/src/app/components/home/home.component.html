@@ -1,17 +1,30 @@
 <div class="jumbotron">
-  <h1 class="display-4">
-    Aplicación de las asigntauras de los ciclos de grado superior
-  </h1>
+  <h2 class="display-4">
+    Grados técnicos CES Juan Pablo II
+  </h2>
   <p class="lead">
-    This is a simple hero unit, a simple jumbotron-style component for calling
-    extra attention to featured content or information.
+    Aplicación web realizada por Ignacio Arroyo para el ciclo de Desarrollo de Aplicaciones Multiplataforma
   </p>
   <hr class="my-4" />
-  <p>
-    It uses utility classes for typography and spacing to space content out
-    within the larger container.
-  </p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-  </p>
+  <p>Aplicación realizada para el módulo de DI,hecha en ANGULAR que consta de:</p>
 </div>
+<ul class="list-group">
+  <li class="list-group-item">Componente Home: representa la entrega inicial de la aplicacion</li>
+  <li class="list-group-item">Componente Ciclos: representa tantas cartas como ciclos existan en el CiclosService</li>
+  <li class="list-group-item">Componente Asignaturas: representa tantas cartas como asignaturas haya en el servicio AsignaturaService. Adicionalmente se cuenta con un filtro para poder ver asignaturas específicas</li>
+  <li class="list-group-item">Componente Asignatura: representa el aspecto que tendrá una carta de las de arriba mencionadas</li>
+  <li class="list-group-item">Componente DetalleCiclo: representa el detalle de un ciclo,donde se mostrarán los conocimientos necesarios para poder aprobar el ciclo y todas las asignaturas que lo componen</li>
+  <li class="list-group-item">
+    Componente NavBar: representa la barra de navegación superior donde se muestra un menú con las siguientes posibilidades:
+    <ul>
+      <li>Inicio: llevará al componente Home</li>
+      <li>Ciclos: llevará al componente Ciclos</li>
+      <li>Asignaturas: llevará al componente Asignaturas</li>
+    </ul>
+  </li>
+  <li class="list-group-item">Servicios: se deberá crear al menos dos servicios que provean de datos tanto para los ciclos como para las asignaturas</li>
+  <li class="list-group-item">Pipes: se deberá crear al menos dos directivas personalizadas que realicen alguna transformación en la aplicación</li>
+</ul>
+<p class="lead">
+  <a class="btn btn-primary btn-lg mt-3" href="https://www.cesjuanpablosegundo.es/" role="button">Ir a la web</a>
+</p>

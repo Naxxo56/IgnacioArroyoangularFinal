@@ -1,39 +1,33 @@
 import { DatosService } from './../../services/datos.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Asignatura } from 'src/utils/Asignatura';
+import { DatosCiclosService } from 'src/app/services/datos-ciclos.service';
+import { Ciclo } from 'src/utils/Ciclo';
 
 @Component({
   selector: 'app-ciclos',
   templateUrl: './ciclos.component.html',
-  styleUrls: ['./ciclos.component.css']
+  styleUrls: ['./ciclos.component.css'],
 })
 export class CiclosComponent implements OnInit {
+  elementosDam: Asignatura[] = [];
+  elementosDaw: Asignatura[] = [];
+  ciclosPintar: Ciclo[] = [];
 
-  //ActivatedRouted
-  numero:number;
-  elementos: string[]= [];
-  elementosJSON: any[] = [];
-  constructor(private getorRutasActivas: ActivatedRoute, private servicioDatos: DatosService) { }
+  constructor(
+    private gestorRutasActivas: ActivatedRoute,
+    private servicioDatos: DatosService,
+    private servicioCiclo: DatosCiclosService,
+    private gestorRutas: Router
+  ) {}
 
   ngOnInit(): void {
-    //console.log(this.getorRutasActivas.snapshot.paramMap.get('id')); 
-    this.numero =  parseInt(this.getorRutasActivas.snapshot.paramMap.get('id'));
-    switch (this.numero) {
-      case 1:
-      //console.log(this.servicioDatos.getArrayUno());
-      this.elementos = this.servicioDatos.getArrayUno();
-      break;
- 
-      case 2:
-        this.elementos = this.servicioDatos.getArrayDos();
-      break;
-
-  
-  
-  
-    }
-    this.elementosJSON = this.servicioDatos.getElementosJSON();  
-    //console.log(this.servicioDatos.getArrayUno());
+    this.elementosDam = this.servicioDatos.getAsignaturasDam();
+    this.elementosDaw = this.servicioDatos.getAsignaturaDaw();
+    this.ciclosPintar = this.servicioCiclo.getCiclos();
   }
-
+  irCiclo(nombreCiclo: string, cursoCiclo: number) {
+    this.gestorRutas.navigate(['cicloDetalle', nombreCiclo, cursoCiclo]);
+  }
 }
