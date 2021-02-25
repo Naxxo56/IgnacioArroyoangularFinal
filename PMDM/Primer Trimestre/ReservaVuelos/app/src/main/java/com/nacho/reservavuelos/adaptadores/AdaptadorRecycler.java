@@ -39,6 +39,7 @@ public class AdaptadorRecycler extends RecyclerView.Adapter<AdaptadorRecycler.Mi
     @Override
     public void onBindViewHolder(@NonNull MiHolderPais holder, int position) {
         final Pais paisActual = listaPaises.get(position);
+
         holder.getBotonDetalle().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

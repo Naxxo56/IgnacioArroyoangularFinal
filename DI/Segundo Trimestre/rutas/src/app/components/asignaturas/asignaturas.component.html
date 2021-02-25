@@ -17,10 +17,22 @@
 <br>
 <h2>Los resultados de búsqueda son:</h2>
  <div class="alert alert-success" role="alert">
-    El número de asignaturas que cumplen el filtro es de : {{asignaturasPintar.length}}
+    El número de asignaturas que cumplen el filtro es de : {{asignaturasBusqueda.length}}
   </div>
 <div class="row">
-  <div class="col" *ngFor="let item of asignaturasPintar">
-    <app-asignatura [asignatura]="item"></app-asignatura>
+  <div [ngSwitch]="asignaturasBusqueda.length">
+    <div *ngSwitchCase="0">
+      <div class="alert alert-secondary" role="alert">
+       No hay asignaturas
+      </div>
+    </div>
+    <div *ngSwitchDefault>     
+      <div class="row">
+      <div class="col" *ngFor="let item of asignaturasBusqueda">
+        <app-asignatura [asignatura]="item"></app-asignatura>
+      </div>
+      </div>
+    </div>
   </div>
+  
 </div>
