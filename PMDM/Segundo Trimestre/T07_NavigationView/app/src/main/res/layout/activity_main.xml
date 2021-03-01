@@ -9,8 +9,6 @@
 
     <include layout="@layout/layout_main_content"/>
 
-
-
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/menu_navigation"
         android:layout_width="wrap_content"
@@ -20,6 +18,5 @@
         app:menu="@menu/menu_lateral"
         app:headerLayout="@layout/layout_header_nav"
         />
-
 
 </androidx.drawerlayout.widget.DrawerLayout>

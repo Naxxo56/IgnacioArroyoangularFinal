@@ -7,13 +7,11 @@
     <br />
     Curso: {{ asignatura.curso }}
     <br />
-    <div *ngFor="let conocimiento of asignatura.conocimientos">
-      <img
-        [src]="conocimiento.imagen"
-        class="img-thumbnail"
-        style="width: 8rem; height: 5rem"
-        alt="..."
-      />
-    </div>
+    <img
+      *ngFor="let conocimiento of asignatura.conocimientos"
+      [src]="conocimiento.imagen | imagenes"
+      class="img-thumbnail"
+      style="width: 4rem; height: 3rem"
+    />
   </div>
 </div>

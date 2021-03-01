@@ -57,7 +57,6 @@ public class AdaptadorRecyclerTec extends RecyclerView.Adapter<AdaptadorRecycler
             }
         });
 
-
     }
 
 

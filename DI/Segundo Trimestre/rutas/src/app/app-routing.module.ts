@@ -12,9 +12,6 @@ const routes: Routes = [
   { path: 'asignaturas', component: AsignaturasComponent },
   { path: 'cicloDetalle', component: CicloDetalleComponent },
   { path: 'cicloDetalle/:ciclo/:curso', component: CicloDetalleComponent },
-  { path: 'cicloDetalle/:ciclo/:curso', component: CicloDetalleComponent },
-  { path: 'cicloDetalle/:ciclo/:curso', component: CicloDetalleComponent },
-  { path: 'cicloDetalle/:ciclo/:curso', component: CicloDetalleComponent },
 ];
 
 @NgModule({

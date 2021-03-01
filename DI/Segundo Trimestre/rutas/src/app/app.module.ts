@@ -9,6 +9,8 @@ import { CiclosComponent } from './components/ciclos/ciclos.component';
 import { AsignaturaComponent } from './components/asignatura/asignatura.component';
 import { AsignaturasComponent } from './components/asignaturas/asignaturas.component';
 import { CicloDetalleComponent } from './components/ciclo-detalle/ciclo-detalle.component';
+import { ImagenesPipe } from './pipes/imagenes.pipe';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { CicloDetalleComponent } from './components/ciclo-detalle/ciclo-detalle.
     CiclosComponent,
     AsignaturaComponent,
     AsignaturasComponent,
-    CicloDetalleComponent
+    CicloDetalleComponent,
+    ImagenesPipe,
   ],
   imports: [
     BrowserModule,

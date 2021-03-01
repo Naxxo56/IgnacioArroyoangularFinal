@@ -5,6 +5,7 @@ import { Asignatura } from 'src/utils/Asignatura';
   providedIn: 'root',
 })
 export class DatosService {
+  
   asignaturaDam: Asignatura[] = [
     {
       nombre: 'Sistemas informáticos',
