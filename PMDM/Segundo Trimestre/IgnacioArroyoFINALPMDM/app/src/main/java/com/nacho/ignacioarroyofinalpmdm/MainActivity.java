@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements AdaptadorLiga.OnL
         setContentView(R.layout.activity_main);
         instancias();
         configurarToolBar();
+        toolbar.setTitle("Todas las ligas");
         acciones();
 
         fm = getSupportFragmentManager();
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements AdaptadorLiga.OnL
                 switch (item.getItemId()) {
                     case R.id.menu_punto_inicial:
                         //Toast.makeText(MainActivity.this, "menu punto", Toast.LENGTH_SHORT).show();
+                        toolbar.setTitle("Todas las ligas");
                         fm = getSupportFragmentManager();
                         ft = fm.beginTransaction();
                         ft.replace(R.id.sitio_fragments, new FragmentPrincipal(), "fp");
@@ -107,6 +109,7 @@ public class MainActivity extends AppCompatActivity implements AdaptadorLiga.OnL
         fm = getSupportFragmentManager();
         ft = fm.beginTransaction();
         ft.replace(R.id.sitio_fragments, FragmentEquipos.newInstance(liga), "fl");
+        toolbar.setTitle(liga.getNombreLiga());
         ft.addToBackStack("bs");
         ft.commit();
         //Toast.makeText(this, liga.getNombreLiga(), Toast.LENGTH_SHORT).show();
@@ -117,6 +120,7 @@ public class MainActivity extends AppCompatActivity implements AdaptadorLiga.OnL
         fm = getSupportFragmentManager();
         ft = fm.beginTransaction();
         ft.replace(R.id.sitio_fragments, FragmentDetalle.newInstance(equipo), "fe");
+        toolbar.setTitle(equipo.getNombre());
         ft.addToBackStack("bs");
         ft.commit();
         //Toast.makeText(this, equipo.getNombre(), Toast.LENGTH_SHORT).show();
